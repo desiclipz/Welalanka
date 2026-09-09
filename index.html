@@ -1,223 +1,478 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    <title>වැල ලංකා</title>
+    <title>වැල ලංකා - Official VIP Media Gallery</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fff1f2',
+                            100: '#ffe4e6',
+                            500: '#ff0055',
+                            600: '#e11d48',
+                            700: '#be123c',
+                            900: '#881337',
+                        },
+                        darkbg: '#090a0f',
+                        cardbg: '#141824',
+                        bordercolor: '#23293a'
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #090a0f; color: #f3f4f6; font-family: 'Inter', sans-serif; }
+        .card-glow:hover { box-shadow: 0 10px 30px -10px rgba(255, 0, 85, 0.45); border-color: rgba(255, 0, 85, 0.6); }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #090a0f; }
+        ::-webkit-scrollbar-thumb { background: #23293a; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #ff0055; }
+    </style>
+
     <!-- 1. Adsterra Popunder Script -->
     <script type="text/javascript" src="https://pl30761942.effectivecpmnetwork.com/c8/17/88/c81788b8748c5c0a12241805299e9328.js"></script>
     
     <!-- 2. Adsterra Social Bar Script -->
     <script type="text/javascript" src="https://pl30761944.effectivecpmnetwork.com/a7/23/aa/a723aa4faaf211da9d6bd59adccc63d2.js"></script>
 </head>
-<body class="bg-zinc-950 text-zinc-100 font-sans pb-16 min-h-screen">
+<body class="min-h-screen flex flex-col justify-between selection:bg-brand-500 selection:text-white">
 
     <!-- Header Navigation -->
-    <header class="sticky top-0 z-50 bg-zinc-950/80 backdrop-blur-lg border-b border-zinc-800/80 px-4 py-3.5">
-        <div class="max-w-md mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <i class="fa-solid fa-fire text-rose-500 text-lg"></i>
-                <h1 class="text-base font-extrabold tracking-wide bg-gradient-to-r from-rose-400 via-pink-400 to-amber-300 bg-clip-text text-transparent">
-                    වැල ලංකා
-                </h1>
+    <header class="sticky top-0 z-40 bg-darkbg/90 backdrop-blur-md border-b border-bordercolor">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-amber-500 flex items-center justify-center font-black text-xl text-white shadow-lg shadow-brand-500/30">
+                        <i class="fa-solid fa-fire text-lg"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl sm:text-2xl font-black tracking-wider text-white">
+                            වැල <span class="text-brand-500">ලංකා</span>
+                        </h1>
+                        <p class="text-[10px] text-gray-400 -mt-1 tracking-widest font-semibold uppercase">VIP Media & Video Hub</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center gap-2 bg-cardbg border border-bordercolor px-3.5 py-2 rounded-xl text-xs font-semibold">
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                        <span class="text-gray-400 hidden sm:inline">Total Items:</span>
+                        <span id="totalItemsCount" class="text-brand-500 font-bold">0</span>
+                    </div>
+                    <a href="https://www.effectivecpmnetwork.com/ib7548bpzb?key=51c2056f2fa963cbad38e9408b8d6d8e" target="_blank" rel="noopener" class="hidden sm:flex items-center gap-1.5 bg-gradient-to-r from-brand-600 to-pink-600 hover:from-brand-500 hover:to-pink-500 text-white font-extrabold px-4 py-2 rounded-xl text-xs shadow-lg shadow-brand-500/20 transition">
+                        <i class="fa-solid fa-crown"></i> VIP ACCESS
+                    </a>
+                </div>
             </div>
-            <a href="https://www.effectivecpmnetwork.com/ib7548bpzb?key=51c2056f2fa963cbad38e9408b8d6d8e" target="_blank" rel="noopener"
-               class="text-xs bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-500 hover:to-pink-500 text-white font-bold px-3.5 py-1.5 rounded-full transition shadow-md shadow-rose-950/50">
-                VIP Access
-            </a>
         </div>
     </header>
 
-    <main class="max-w-md mx-auto px-4 mt-4">
-        
-        <!-- Top Adsterra 728x90 Banner -->
-        <div class="my-4 flex flex-col justify-center items-center overflow-hidden">
-        <span class="text-[9px] text-zinc-500 uppercase tracking-widest block mb-1">Sponsored</span>
-        <iframe srcdoc="<!DOCTYPE html><html><head><meta charset=&quot;utf-8&quot;></head><body style=&quot;margin:0;padding:0;display:flex;justify-content:center;align-items:center;background:transparent;&quot;><script type=&quot;text/javascript&quot;>atOptions={'key':'292388e6c887c71a96888fa0cc36941f','format':'iframe','height':90,'width':728,'params':{}};</script><script type=&quot;text/javascript&quot; src=&quot;https://www.highperformanceformat.com/292388e6c887c71a96888fa0cc36941f/invoke.js&quot;></script></body></html>" style="width:100%;max-width:728px;height:90px;border:none;overflow:hidden;" scrolling="no"></iframe>
-    </div>
-
-        <!-- Direct VIP Offer Button -->
-        <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-4 mb-5 text-center shadow-lg">
-            <a href="https://www.effectivecpmnetwork.com/ib7548bpzb?key=51c2056f2fa963cbad38e9408b8d6d8e" target="_blank" rel="noopener"
-               class="block w-full bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-500 hover:to-pink-500 text-white font-bold py-2.5 rounded-xl text-xs tracking-wide shadow-md transition">
-                ⚡ EXCLUSIVE VIP ACCESS - CLICK HERE ➔
-            </a>
-        </div>
-
-        <!-- Native Ad Container -->
-        <div class="mb-5 p-2 bg-zinc-900/50 border border-zinc-800 rounded-xl text-center overflow-hidden">
-            <script async="async" data-cfasync="false" src="https://pl30761943.effectivecpmnetwork.com/2d08a49360bea68cb6fef1b2954d6af5/invoke.js"></script>
-            <div id="container-2d08a49360bea68cb6fef1b2954d6af5"></div>
-        </div>
-
-        <!-- MEDIA FEED CONTAINER -->
-        <section id="media-container">
+    <!-- Top Banner Advertisement Placement -->
+    <section class="w-full bg-cardbg/40 border-b border-bordercolor py-3">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col items-center justify-center">
+            <p class="text-[10px] text-gray-500 font-semibold mb-1 uppercase tracking-widest">Sponsored Advertisement</p>
             
-      <!-- MEDIA ITEM 1 -->
-      <article class="media-card group bg-zinc-900/90 border border-zinc-800 rounded-2xl overflow-hidden shadow-xl mb-6 hover:border-rose-500/40 transition duration-300">
-          <div class="p-3.5 flex justify-between items-center border-b border-zinc-800/80">
-              <h3 class="text-xs font-semibold text-zinc-200 truncate pr-2">Exclusive Collection #1</h3>
-              <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-rose-500/10 text-rose-400 border border-rose-500/20">
-                  NEW
-              </span>
-          </div>
+            <div class="hidden md:block overflow-hidden rounded-lg min-h-[90px]">
+                <script type="text/javascript">
+                  atOptions = { 'key' : '292388e6c887c71a96888fa0cc36941f', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} };
+                </script>
+                <script type="text/javascript" src="https://www.highperformanceformat.com/292388e6c887c71a96888fa0cc36941f/invoke.js"></script>
+            </div>
 
-          <div class="relative w-full aspect-video bg-zinc-950 overflow-hidden">
-              <img src="https://i.ibb.co/5gK38nSt/Real-Photo-AI-Natural-lk-3-1786365856985.jpg" alt="Exclusive Collection #1" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-          </div>
+            <div class="block md:hidden overflow-hidden rounded-lg min-h-[50px]">
+                <script type="text/javascript">
+                  atOptions = { 'key' : 'b64e2f22ac2f7a3dff3a923ef183296a', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
+                </script>
+                <script type="text/javascript" src="https://www.highperformanceformat.com/b64e2f22ac2f7a3dff3a923ef183296a/invoke.js"></script>
+            </div>
+        </div>
+    </section>
 
-          
-          <div class="my-4 flex flex-col justify-center items-center overflow-hidden">
-        <span class="text-[9px] text-zinc-500 uppercase tracking-widest block mb-1">Sponsored</span>
-        <iframe srcdoc="<!DOCTYPE html><html><head><meta charset=&quot;utf-8&quot;></head><body style=&quot;margin:0;padding:0;display:flex;justify-content:center;align-items:center;background:transparent;&quot;><script type=&quot;text/javascript&quot;>atOptions={'key':'528c2baaa775a51f30609ead9051f321','format':'iframe','height':60,'width':468,'params':{}};</script><script type=&quot;text/javascript&quot; src=&quot;https://www.highperformanceformat.com/528c2baaa775a51f30609ead9051f321/invoke.js&quot;></script></body></html>" style="width:100%;max-width:468px;height:60px;border:none;overflow:hidden;" scrolling="no"></iframe>
-    </div>
-      </article>
+    <!-- Main Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full flex-grow">
+        
+        <!-- Controls: Search & Filters -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-6">
+            <div class="flex items-center bg-cardbg p-1 border border-bordercolor rounded-xl w-full sm:w-auto">
+                <button data-filter="all" class="filter-btn active flex-1 sm:flex-none px-5 py-2 rounded-lg text-xs font-bold transition text-white bg-brand-500">
+                    All
+                </button>
+                <button data-filter="photo" class="filter-btn flex-1 sm:flex-none px-5 py-2 rounded-lg text-xs font-bold transition text-gray-400 hover:text-white">
+                    <i class="fa-regular fa-image mr-1"></i> Photos
+                </button>
+                <button data-filter="video" class="filter-btn flex-1 sm:flex-none px-5 py-2 rounded-lg text-xs font-bold transition text-gray-400 hover:text-white">
+                    <i class="fa-solid fa-play mr-1"></i> Videos
+                </button>
+            </div>
 
-      <!-- MEDIA ITEM 2 -->
-      <article class="media-card group bg-zinc-900/90 border border-zinc-800 rounded-2xl overflow-hidden shadow-xl mb-6 hover:border-rose-500/40 transition duration-300">
-          <div class="p-3.5 flex justify-between items-center border-b border-zinc-800/80">
-              <h3 class="text-xs font-semibold text-zinc-200 truncate pr-2">Exclusive Collection #2</h3>
-              <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-rose-500/10 text-rose-400 border border-rose-500/20">
-                  NEW
-              </span>
-          </div>
+            <div class="flex items-center gap-3 w-full sm:w-auto">
+                <div class="flex items-center gap-1.5 bg-cardbg border border-bordercolor px-3 py-1.5 rounded-xl text-xs text-gray-400">
+                    <span class="text-[11px] font-semibold hidden sm:inline">Per Page:</span>
+                    <select id="itemsPerPageSelect" class="bg-darkbg text-white border border-bordercolor rounded-lg px-2 py-1 text-xs focus:outline-none focus:border-brand-500">
+                        <option value="6">6</option>
+                        <option value="12" selected>12</option>
+                        <option value="24">24</option>
+                        <option value="48">48</option>
+                        <option value="999999">All</option>
+                    </select>
+                </div>
 
-          <div class="relative w-full aspect-video bg-zinc-950 overflow-hidden">
-              <img src="https://i.ibb.co/HTB79jSQ/Real-Photo-AI-Natural-lk-2-1786365856593.jpg" alt="Exclusive Collection #2" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-          </div>
+                <div class="relative flex-grow sm:w-64">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-xs"></i>
+                    <input type="text" id="searchInput" placeholder="Search gallery..." class="w-full bg-cardbg border border-bordercolor rounded-xl pl-9 pr-4 py-2 text-xs text-white placeholder-gray-500 focus:outline-none focus:border-brand-500 transition">
+                </div>
+            </div>
+        </div>
 
-          
-          <div class="my-4 flex flex-col justify-center items-center overflow-hidden">
-        <span class="text-[9px] text-zinc-500 uppercase tracking-widest block mb-1">Sponsored</span>
-        <iframe srcdoc="<!DOCTYPE html><html><head><meta charset=&quot;utf-8&quot;></head><body style=&quot;margin:0;padding:0;display:flex;justify-content:center;align-items:center;background:transparent;&quot;><script type=&quot;text/javascript&quot;>atOptions={'key':'528c2baaa775a51f30609ead9051f321','format':'iframe','height':60,'width':468,'params':{}};</script><script type=&quot;text/javascript&quot; src=&quot;https://www.highperformanceformat.com/528c2baaa775a51f30609ead9051f321/invoke.js&quot;></script></body></html>" style="width:100%;max-width:468px;height:60px;border:none;overflow:hidden;" scrolling="no"></iframe>
-    </div>
-      </article>
+        <!-- In-Content 468x60 Banner Ad -->
+        <div class="mb-8 flex flex-col items-center justify-center">
+            <script type="text/javascript">
+              atOptions = { 'key' : '528c2baaa775a51f30609ead9051f321', 'format' : 'iframe', 'height' : 60, 'width' : 468, 'params' : {} };
+            </script>
+            <script type="text/javascript" src="https://www.highperformanceformat.com/528c2baaa775a51f30609ead9051f321/invoke.js"></script>
+        </div>
 
-      <!-- MEDIA ITEM 3 -->
-      <article class="media-card group bg-zinc-900/90 border border-zinc-800 rounded-2xl overflow-hidden shadow-xl mb-6 hover:border-rose-500/40 transition duration-300">
-          <div class="p-3.5 flex justify-between items-center border-b border-zinc-800/80">
-              <h3 class="text-xs font-semibold text-zinc-200 truncate pr-2">Exclusive Collection #3</h3>
-              <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-rose-500/10 text-rose-400 border border-rose-500/20">
-                  NEW
-              </span>
-          </div>
+        <!-- Media Grid & Sidebar -->
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+            <div class="lg:col-span-3">
+                <div id="emptyState" class="hidden flex-col items-center justify-center py-16 bg-cardbg/50 border border-dashed border-bordercolor rounded-2xl text-center">
+                    <div class="w-16 h-16 rounded-full bg-brand-500/10 flex items-center justify-center text-brand-500 text-2xl mb-3">
+                        <i class="fa-regular fa-folder-open"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-white mb-1">No media items found</h3>
+                </div>
 
-          <div class="relative w-full aspect-video bg-zinc-950 overflow-hidden">
-              <img src="https://i.ibb.co/jZMpHfRV/Real-Photo-AI-Natural-lk-5-1786365857810.jpg" alt="Exclusive Collection #3" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-          </div>
+                <div id="mediaGrid" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5"></div>
 
-          
-          <div class="my-4 flex flex-col justify-center items-center overflow-hidden">
-        <span class="text-[9px] text-zinc-500 uppercase tracking-widest block mb-1">Sponsored</span>
-        <iframe srcdoc="<!DOCTYPE html><html><head><meta charset=&quot;utf-8&quot;></head><body style=&quot;margin:0;padding:0;display:flex;justify-content:center;align-items:center;background:transparent;&quot;><script type=&quot;text/javascript&quot;>atOptions={'key':'528c2baaa775a51f30609ead9051f321','format':'iframe','height':60,'width':468,'params':{}};</script><script type=&quot;text/javascript&quot; src=&quot;https://www.highperformanceformat.com/528c2baaa775a51f30609ead9051f321/invoke.js&quot;></script></body></html>" style="width:100%;max-width:468px;height:60px;border:none;overflow:hidden;" scrolling="no"></iframe>
-    </div>
-      </article>
+                <!-- Pagination Controls Bar -->
+                <div id="paginationContainer" class="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 bg-cardbg border border-bordercolor p-4 rounded-2xl">
+                    <div class="text-xs text-gray-400 font-semibold">
+                        Showing <span id="showingStartCount" class="text-white font-bold">0</span> - <span id="showingEndCount" class="text-white font-bold">0</span> of <span id="showingTotalCount" class="text-brand-500 font-bold">0</span> Items (Page <span id="currentPageNum" class="text-white font-bold">1</span> of <span id="totalPagesNum" class="text-white font-bold">1</span>)
+                    </div>
 
-      <!-- MEDIA ITEM 4 -->
-      <article class="media-card group bg-zinc-900/90 border border-zinc-800 rounded-2xl overflow-hidden shadow-xl mb-6 hover:border-rose-500/40 transition duration-300">
-          <div class="p-3.5 flex justify-between items-center border-b border-zinc-800/80">
-              <h3 class="text-xs font-semibold text-zinc-200 truncate pr-2">Exclusive Collection #4</h3>
-              <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-rose-500/10 text-rose-400 border border-rose-500/20">
-                  NEW
-              </span>
-          </div>
+                    <div id="paginationButtons" class="flex items-center gap-1.5 flex-wrap justify-center"></div>
+                </div>
+            </div>
 
-          <div class="relative w-full aspect-video bg-zinc-950 overflow-hidden">
-              <img src="https://i.ibb.co/6JRYmvpc/Real-Photo-AI-Natural-lk-6-1786365858207.jpg" alt="Exclusive Collection #4" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-          </div>
+            <!-- Sticky Sidebar With 300x160 Ad & Direct Link -->
+            <aside class="space-y-6">
+                <div class="sticky top-24 bg-cardbg border border-bordercolor rounded-2xl p-4 flex flex-col items-center text-center">
+                    <p class="text-[10px] text-gray-500 font-bold uppercase tracking-wider mb-3">Sponsored Video Stream</p>
+                    <div class="overflow-hidden rounded-lg min-h-[300px] flex items-center justify-center bg-darkbg/50 w-full">
+                        <script type="text/javascript">
+                          atOptions = { 'key' : '0b4be129316ba77bf6cc2db3b82a0bf8', 'format' : 'iframe', 'height' : 300, 'width' : 160, 'params' : {} };
+                        </script>
+                        <script type="text/javascript" src="https://www.highperformanceformat.com/0b4be129316ba77bf6cc2db3b82a0bf8/invoke.js"></script>
+                    </div>
 
-          
-          <div class="my-4 flex flex-col justify-center items-center overflow-hidden">
-        <span class="text-[9px] text-zinc-500 uppercase tracking-widest block mb-1">Sponsored</span>
-        <iframe srcdoc="<!DOCTYPE html><html><head><meta charset=&quot;utf-8&quot;></head><body style=&quot;margin:0;padding:0;display:flex;justify-content:center;align-items:center;background:transparent;&quot;><script type=&quot;text/javascript&quot;>atOptions={'key':'528c2baaa775a51f30609ead9051f321','format':'iframe','height':60,'width':468,'params':{}};</script><script type=&quot;text/javascript&quot; src=&quot;https://www.highperformanceformat.com/528c2baaa775a51f30609ead9051f321/invoke.js&quot;></script></body></html>" style="width:100%;max-width:468px;height:60px;border:none;overflow:hidden;" scrolling="no"></iframe>
-    </div>
-      </article>
-        </section>
-
-        <!-- PAGINATION CONTROLS CONTAINER -->
-        <div id="pagination-controls"></div>
-
-        <!-- Bottom Banner -->
-        <div class="my-4 flex flex-col justify-center items-center overflow-hidden">
-        <span class="text-[9px] text-zinc-500 uppercase tracking-widest block mb-1">Sponsored</span>
-        <iframe srcdoc="<!DOCTYPE html><html><head><meta charset=&quot;utf-8&quot;></head><body style=&quot;margin:0;padding:0;display:flex;justify-content:center;align-items:center;background:transparent;&quot;><script type=&quot;text/javascript&quot;>atOptions={'key':'0b4be129316ba77bf6cc2db3b82a0bf8','format':'iframe','height':160,'width':300,'params':{}};</script><script type=&quot;text/javascript&quot; src=&quot;https://www.highperformanceformat.com/0b4be129316ba77bf6cc2db3b82a0bf8/invoke.js&quot;></script></body></html>" style="width:100%;max-width:300px;height:160px;border:none;overflow:hidden;" scrolling="no"></iframe>
-    </div>
-
-        <footer class="mt-8 text-center text-xs text-zinc-600 border-t border-zinc-900 pt-6">
-            <p>© 2026 වැල ලංකා. All rights reserved.</p>
-        </footer>
+                    <a href="https://www.effectivecpmnetwork.com/ib7548bpzb?key=51c2056f2fa963cbad38e9408b8d6d8e" target="_blank" rel="noopener" class="mt-4 w-full bg-gradient-to-r from-amber-500 to-brand-500 hover:from-amber-600 hover:to-brand-600 text-white text-xs font-extrabold py-3 rounded-xl shadow-lg transition flex items-center justify-center gap-2 animate-bounce">
+                        <i class="fa-solid fa-bolt"></i> HIGH SPEED DIRECT ACCESS
+                    </a>
+                </div>
+            </aside>
+        </div>
 
     </main>
 
-    <!-- AUTOMATIC PAGINATION LOGIC -->
+    <!-- Floating Bottom Bar Direct Link -->
+    <div class="fixed bottom-0 left-0 right-0 z-40 bg-cardbg/95 backdrop-blur-md border-t border-brand-500/40 p-2.5 shadow-2xl flex items-center justify-between px-4 sm:px-8">
+        <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-brand-500 flex items-center justify-center text-white text-xs animate-spin">
+                <i class="fa-solid fa-compact-disc"></i>
+            </div>
+            <div>
+                <p class="text-xs font-bold text-white">VIP Direct High Speed Stream & Download</p>
+                <p class="text-[10px] text-gray-400">No Limit, Instant Speed Streaming Server</p>
+            </div>
+        </div>
+        <a href="https://www.effectivecpmnetwork.com/ib7548bpzb?key=51c2056f2fa963cbad38e9408b8d6d8e" target="_blank" rel="noopener" class="bg-gradient-to-r from-amber-500 via-rose-500 to-brand-500 text-white font-black px-4 py-2 rounded-xl text-xs shadow-lg shadow-brand-500/30 hover:scale-105 transition flex items-center gap-1.5">
+            <i class="fa-solid fa-download"></i> ACCESS NOW
+        </a>
+    </div>
+
+    <!-- Native Adsterra Invoke Widget -->
+    <div class="my-8 max-w-7xl mx-auto px-4 pb-16">
+        <script async="async" data-cfasync="false" src="https://pl30761943.effectivecpmnetwork.com/2d08a49360bea68cb6fef1b2954d6af5/invoke.js"></script>
+        <div id="container-2d08a49360bea68cb6fef1b2954d6af5"></div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightboxModal" class="fixed inset-0 bg-black/90 backdrop-blur-lg z-50 flex items-center justify-center hidden p-4">
+        <div class="relative max-w-4xl w-full flex flex-col items-center">
+            <button id="closeLightboxBtn" class="absolute -top-12 right-0 text-white hover:text-brand-500 text-2xl font-bold bg-gray-900/80 w-10 h-10 rounded-full flex items-center justify-center border border-gray-700">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="w-full overflow-hidden rounded-2xl border border-bordercolor bg-cardbg p-2 max-h-[75vh] flex items-center justify-center">
+                <img id="lightboxImg" src="" alt="Preview" class="max-h-[70vh] w-auto object-contain rounded-xl">
+            </div>
+            <div class="w-full mt-3 flex flex-col sm:flex-row items-center justify-between bg-cardbg p-4 rounded-xl border border-bordercolor gap-3">
+                <h4 id="lightboxTitle" class="text-sm font-bold text-white truncate max-w-md">Title</h4>
+                <a id="lightboxCtaBtn" href="#" target="_blank" rel="noopener" class="w-full sm:w-auto bg-gradient-to-r from-brand-500 to-rose-600 text-white font-bold px-6 py-2.5 rounded-xl text-xs transition text-center flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-cloud-arrow-down"></i> Download Video
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-cardbg border-t border-bordercolor py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-xs text-gray-500">&copy; 2026 වැල ලංකා. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- EMBEDDED MEDIA DATABASE & INTERACTIVE GALLERY LOGIC -->
     <script>
-        (function() {
-            const itemsPerPage = 10;
-            let currentPage = 1;
-            const cards = Array.from(document.querySelectorAll('.media-card'));
-            const totalPages = Math.ceil(cards.length / itemsPerPage);
+        const DIRECT_AD_URL = "https://www.effectivecpmnetwork.com/ib7548bpzb?key=51c2056f2fa963cbad38e9408b8d6d8e";
+        const mediaItems = [
+  {
+    "id": "item-init-1",
+    "title": "වැල ලංකා Exclusive HD Collection #1",
+    "imageUrl": "https://i.ibb.co/PvnB6t0d/Real-Photo-AI-Natural-lk-1-1786365565336.jpg",
+    "videoUrl": "",
+    "type": "photo",
+    "createdAt": 1788977350020
+  },
+  {
+    "id": "item-init-2",
+    "title": "වැල ලංකා Exclusive HD Collection #2",
+    "imageUrl": "https://i.ibb.co/QvhX7cdy/Real-Photo-AI-Natural-1786352658076.jpg",
+    "videoUrl": "https://example.com/sample-video",
+    "type": "video",
+    "createdAt": 1788977350019
+  },
+  {
+    "id": "item-init-3",
+    "title": "වැල ලංකා Exclusive HD Collection #3",
+    "imageUrl": "https://i.ibb.co/DfDKnnB7/Real-Photo-AI-Natural-lk-6-1788958401390.jpg",
+    "videoUrl": "",
+    "type": "photo",
+    "createdAt": 1788977350018
+  },
+  {
+    "id": "item-init-4",
+    "title": "වැල ලංකා Exclusive HD Collection #4",
+    "imageUrl": "https://i.ibb.co/v43RXrNN/Real-Photo-AI-Natural-lk-2-1788958399848.jpg",
+    "videoUrl": "https://example.com/sample-video",
+    "type": "video",
+    "createdAt": 1788977350017
+  },
+  {
+    "id": "item-1788979446097-0",
+    "title": "වැල ලංකා Exclusive HD #5",
+    "imageUrl": "https://i.ibb.co/v43RXrNN/Real-Photo-AI-Natural-lk-2-1788958399848.jpg",
+    "videoUrl": "",
+    "type": "photo",
+    "createdAt": 1788979446097
+  },
+  {
+    "id": "item-1788979446097-1",
+    "title": "වැල ලංකා Exclusive HD #6",
+    "imageUrl": "https://i.ibb.co/DfDKnnB7/Real-Photo-AI-Natural-lk-6-1788958401390.jpg",
+    "videoUrl": "",
+    "type": "photo",
+    "createdAt": 1788979446098
+  },
+  {
+    "id": "item-1788979446097-2",
+    "title": "වැල ලංකා Exclusive HD #7",
+    "imageUrl": "https://i.ibb.co/QvhX7cdy/Real-Photo-AI-Natural-1786352658076.jpg",
+    "videoUrl": "",
+    "type": "photo",
+    "createdAt": 1788979446099
+  },
+  {
+    "id": "item-1788979446097-3",
+    "title": "වැල ලංකා Exclusive HD #8",
+    "imageUrl": "https://i.ibb.co/PvnB6t0d/Real-Photo-AI-Natural-lk-1-1786365565336.jpg",
+    "videoUrl": "",
+    "type": "photo",
+    "createdAt": 1788979446100
+  }
+];
 
-            function showPage(page) {
-                if (page < 1) page = 1;
-                if (page > totalPages && totalPages > 0) page = totalPages;
-                currentPage = page;
+        let activeFilter = 'all';
+        let searchQuery = '';
+        let currentPage = 1;
+        let itemsPerPage = 12;
 
-                cards.forEach((card, index) => {
-                    if (index >= (page - 1) * itemsPerPage && index < page * itemsPerPage) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
+        function renderGallery() {
+            const grid = document.getElementById('mediaGrid');
+            const emptyState = document.getElementById('emptyState');
+            document.getElementById('totalItemsCount').textContent = mediaItems.length;
+
+            let filtered = mediaItems.filter(item => {
+                const matchesFilter = activeFilter === 'all' || item.type === activeFilter;
+                const matchesSearch = (item.title || '').toLowerCase().includes(searchQuery.toLowerCase());
+                return matchesFilter && matchesSearch;
+            });
+
+            if (filtered.length === 0) {
+                grid.innerHTML = '';
+                emptyState.classList.remove('hidden');
+                emptyState.classList.add('flex');
+                document.getElementById('paginationContainer').classList.add('hidden');
+                return;
+            } else {
+                emptyState.classList.add('hidden');
+                emptyState.classList.remove('flex');
+                document.getElementById('paginationContainer').classList.remove('hidden');
+            }
+
+            const totalPages = Math.ceil(filtered.length / itemsPerPage) || 1;
+            if (currentPage > totalPages) currentPage = totalPages;
+
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = Math.min(startIndex + itemsPerPage, filtered.length);
+            const paginatedItems = filtered.slice(startIndex, endIndex);
+
+            document.getElementById('showingStartCount').textContent = startIndex + 1;
+            document.getElementById('showingEndCount').textContent = endIndex;
+            document.getElementById('showingTotalCount').textContent = filtered.length;
+            document.getElementById('currentPageNum').textContent = currentPage;
+            document.getElementById('totalPagesNum').textContent = totalPages;
+
+            let html = '';
+            paginatedItems.forEach((item, index) => {
+                if (index > 0 && index % 5 === 0) {
+                    html += `
+                        <div class="bg-cardbg border border-brand-500/40 rounded-2xl p-4 flex flex-col items-center justify-center text-center col-span-1 sm:col-span-2 xl:col-span-1 relative overflow-hidden bg-gradient-to-b from-cardbg to-brand-900/20 shadow-xl">
+                            <span class="absolute top-2 right-2 text-[9px] font-black uppercase tracking-widest bg-brand-500/30 text-brand-400 px-2 py-0.5 rounded">SPONSORED</span>
+                            <i class="fa-solid fa-circle-play text-4xl text-brand-500 mb-2 animate-bounce"></i>
+                            <h4 class="text-xs font-black text-white mb-1">Exclusive Direct HD Stream</h4>
+                            <a href="${DIRECT_AD_URL}" target="_blank" rel="noopener" class="w-full bg-gradient-to-r from-amber-500 to-brand-500 text-white font-extrabold text-xs py-2.5 rounded-xl shadow-lg transition flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-bolt"></i> WATCH FULL HD NOW
+                            </a>
+                        </div>
+                    `;
+                }
+
+                const hasCustomLink = Boolean(item.videoUrl && item.videoUrl.trim() !== '');
+                const targetLink = hasCustomLink ? item.videoUrl.trim() : DIRECT_AD_URL;
+
+                // Download Video button appears whenever optional link is present
+                const actionButton = hasCustomLink ? `
+                    <a href="${targetLink}" target="_blank" rel="noopener" class="w-full bg-gradient-to-r from-brand-600 to-pink-600 hover:from-brand-500 hover:to-pink-500 text-white font-bold py-2.5 px-3 rounded-xl text-xs transition flex items-center justify-center gap-2 shadow-lg shadow-brand-500/20 active:scale-98">
+                        <i class="fa-solid fa-cloud-arrow-down"></i>
+                        <span>Download Video</span>
+                    </a>` : `
+                    <a href="${DIRECT_AD_URL}" target="_blank" rel="noopener" class="w-full bg-cardbg hover:bg-bordercolor border border-bordercolor text-gray-300 hover:text-white font-semibold py-2 px-3 rounded-xl text-xs transition flex items-center justify-center gap-1.5">
+                        <i class="fa-solid fa-eye text-brand-500"></i>
+                        <span>View Exclusive</span>
+                    </a>`;
+
+                html += `
+                    <div class="bg-cardbg border border-bordercolor card-glow rounded-2xl overflow-hidden flex flex-col justify-between transition-all duration-300 group">
+                        <div class="relative h-48 bg-darkbg overflow-hidden cursor-pointer" onclick="openLightbox('${item.imageUrl}', '${(item.title || '').replace(/'/g, "\\'")}', '${targetLink}')">
+                            <img src="${item.imageUrl}" alt="${item.title}" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-cardbg via-transparent to-transparent opacity-80"></div>
+                            <div class="absolute top-3 left-3 flex items-center gap-1.5">
+                                <span class="bg-black/60 backdrop-blur-md border border-white/10 text-white text-[10px] font-bold px-2.5 py-1 rounded-lg">
+                                    <i class="${hasCustomLink ? 'fa-solid fa-video text-brand-500' : 'fa-regular fa-image text-cyan-400'}"></i>
+                                    ${hasCustomLink ? 'HD VIDEO' : 'HD PHOTO'}
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="p-4 flex flex-col justify-between flex-grow">
+                            <h3 class="text-xs font-bold text-white line-clamp-2 mb-3">${item.title}</h3>
+                            ${actionButton}
+                        </div>
+                    </div>
+                `;
+            });
+
+            grid.innerHTML = html;
+            renderPaginationButtons(totalPages);
+        }
+
+        function renderPaginationButtons(totalPages) {
+            const btnContainer = document.getElementById('paginationButtons');
+            let btnsHtml = '';
+
+            btnsHtml += `<button onclick="changePage(${currentPage - 1})" ${currentPage === 1 ? 'disabled class="opacity-40 cursor-not-allowed bg-darkbg text-gray-500 px-3 py-1.5 rounded-lg text-xs font-bold border border-bordercolor"' : 'class="bg-darkbg hover:bg-brand-500 text-white px-3 py-1.5 rounded-lg text-xs font-bold border border-bordercolor transition"'}>
+                <i class="fa-solid fa-chevron-left"></i> Prev
+            </button>`;
+
+            for (let p = 1; p <= totalPages; p++) {
+                if (p === 1 || p === totalPages || (p >= currentPage - 1 && p <= currentPage + 1)) {
+                    btnsHtml += `<button onclick="changePage(${p})" class="px-3 py-1.5 rounded-lg text-xs font-bold transition border ${p === currentPage ? 'bg-brand-500 text-white border-brand-500' : 'bg-darkbg hover:bg-gray-800 text-gray-300 border-bordercolor'}">${p}</button>`;
+                } else if (p === currentPage - 2 || p === currentPage + 2) {
+                    btnsHtml += `<span class="text-gray-500 text-xs px-1">...</span>`;
+                }
+            }
+
+            btnsHtml += `<button onclick="changePage(${currentPage + 1})" ${currentPage === totalPages ? 'disabled class="opacity-40 cursor-not-allowed bg-darkbg text-gray-500 px-3 py-1.5 rounded-lg text-xs font-bold border border-bordercolor"' : 'class="bg-darkbg hover:bg-brand-500 text-white px-3 py-1.5 rounded-lg text-xs font-bold border border-bordercolor transition"'}>
+                Next <i class="fa-solid fa-chevron-right"></i>
+            </button>`;
+
+            btnContainer.innerHTML = btnsHtml;
+        }
+
+        function changePage(page) {
+            const filteredLength = mediaItems.filter(item => {
+                const matchesFilter = activeFilter === 'all' || item.type === activeFilter;
+                const matchesSearch = (item.title || '').toLowerCase().includes(searchQuery.toLowerCase());
+                return matchesFilter && matchesSearch;
+            }).length;
+
+            const totalPages = Math.ceil(filteredLength / itemsPerPage) || 1;
+            if (page < 1 || page > totalPages) return;
+            currentPage = page;
+            renderGallery();
+            window.scrollTo({ top: 300, behavior: 'smooth' });
+        }
+
+        function openLightbox(imgUrl, title, downloadUrl) {
+            document.getElementById('lightboxImg').src = imgUrl;
+            document.getElementById('lightboxTitle').textContent = title;
+            document.getElementById('lightboxCtaBtn').href = downloadUrl;
+            document.getElementById('lightboxModal').classList.remove('hidden');
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            renderGallery();
+            document.getElementById('closeLightboxBtn').addEventListener('click', () => {
+                document.getElementById('lightboxModal').classList.add('hidden');
+            });
+
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.filter-btn').forEach(b => {
+                        b.classList.remove('active', 'bg-brand-500', 'text-white');
+                        b.classList.add('text-gray-400');
+                    });
+                    btn.classList.add('active', 'bg-brand-500', 'text-white');
+                    activeFilter = btn.dataset.filter;
+                    currentPage = 1;
+                    renderGallery();
                 });
+            });
 
-                renderPagination();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
+            document.getElementById('searchInput').addEventListener('input', (e) => {
+                searchQuery = e.target.value;
+                currentPage = 1;
+                renderGallery();
+            });
 
-            function renderPagination() {
-                const container = document.getElementById('pagination-controls');
-                if (!container) return;
-                if (totalPages <= 1) {
-                    container.innerHTML = '';
-                    return;
-                }
-
-                let html = '<div class="flex items-center justify-between gap-2 my-6 p-3 bg-zinc-900 border border-zinc-800 rounded-xl shadow-lg">';
-                
-                if (currentPage > 1) {
-                    html += '<button onclick="window.changeStorePage(' + (currentPage - 1) + ')" class="bg-zinc-800 hover:bg-zinc-700 text-zinc-200 font-semibold px-3.5 py-2 rounded-lg text-xs flex items-center gap-1.5 transition">' +
-                        '<i class="fa-solid fa-arrow-left"></i> Previous' +
-                    '</button>';
-                } else {
-                    html += '<div></div>';
-                }
-
-                html += '<span class="text-xs font-medium text-zinc-400">Page ' + currentPage + ' of ' + totalPages + '</span>';
-
-                if (currentPage < totalPages) {
-                    html += '<button onclick="window.changeStorePage(' + (currentPage + 1) + ')" class="bg-rose-600 hover:bg-rose-500 text-white font-semibold px-3.5 py-2 rounded-lg text-xs flex items-center gap-1.5 transition">' +
-                        'Next <i class="fa-solid fa-arrow-right"></i>' +
-                    '</button>';
-                } else {
-                    html += '<div></div>';
-                }
-
-                html += '</div>';
-                container.innerHTML = html;
-            }
-
-            window.changeStorePage = function(p) {
-                showPage(p);
-            };
-
-            showPage(1);
-        })();
+            document.getElementById('itemsPerPageSelect').addEventListener('change', (e) => {
+                itemsPerPage = parseInt(e.target.value);
+                currentPage = 1;
+                renderGallery();
+            });
+        });
     </script>
 </body>
 </html>
