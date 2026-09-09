@@ -1,593 +1,12 @@
 <!DOCTYPE html>
-<html lang="si" class="dark"><head><script data-bard-client-injected="true">(function(firebaseConfig, initialAuthToken, appId) {
-        window.__firebase_config = firebaseConfig;
-        window.__initial_auth_token = initialAuthToken;
-        window.__app_id = appId;
-            })("\n{\n  \"apiKey\": \"AIzaSyCqyCcs2R2e7AegGjvFAwG98wlamtbHvZY\",\n  \"authDomain\": \"bard-frontend.firebaseapp.com\",\n  \"projectId\": \"bard-frontend\",\n  \"storageBucket\": \"bard-frontend.firebasestorage.app\",\n  \"messagingSenderId\": \"175205271074\",\n  \"appId\": \"1:175205271074:web:2b7bd4d34d33bf38e6ec7b\"\n}\n","eyJhbGciOiJSUzI1NiIsImtpZCI6IjExNjRiNzdiNDMzZDdhMDAyMWI4NjE4YjhjYTU3ZTMyZGI5MWUxMTMiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiJmaXJlYmFzZS1hZG1pbnNkay1mYnN2Y0BiYXJkLWZyb250ZW5kLmlhbS5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiaHR0cHM6Ly9pZGVudGl0eXRvb2xraXQuZ29vZ2xlYXBpcy5jb20vZ29vZ2xlLmlkZW50aXR5LmlkZW50aXR5dG9vbGtpdC52MS5JZGVudGl0eVRvb2xraXQiLCJ1aWQiOiIwMjg4MTg1NzE4MTA3NjM0MjkxNyIsImlzcyI6ImZpcmViYXNlLWFkbWluc2RrLWZic3ZjQGJhcmQtZnJvbnRlbmQuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJjbGFpbXMiOnsiYXBwSWQiOiJjXzViYmJlMDliZjRjZmRkYTdfaW5kZXguaHRtbC00MTAifSwiZXhwIjoxNzg4OTY5NjAwLCJpYXQiOjE3ODg5NjYwMDAsImFsZyI6IlJTMjU2In0.kuRFBEUzSKA655rlsArcWRX2sMjnyPjIT3mx7Ox14o_2nAG4omD3clMDF4JRAPee8tJJZl4uUTDJesFl5E1S1DT7R7lkFJXn7jwpNQ_fHlLA7iMOsS2q7MM7tSGGlps7moYDWvJOw8TnGYm6SXhcWszXLEmHg7aPAOzgBjfcKvcR2mbrdYSqSvcL4Ed4pnav1Difub6RHtwfawq54W9XrrylrlBW_Gvanu6UKRb1dpg0sgxJtdcyb7PW87edUUMyceGFHxuGAasw-LtFks192xildqDoD9aBpXw6OFM2PfQDfWcIfNayzsLzy3Ip0qebG7ZOhvH0Pafopp-v4F3f2A","c_5bbbe09bf4cfdda7_index.html-410")</script><script data-bard-client-injected="true">(function(){'use strict';window.addEventListener("message",a=>{a.data&&a.data.type==="SUPPLEMENTAL_DATA_UPDATE"&&window.dispatchEvent(new CustomEvent("supplementaldataupdate",{detail:a.data.data}))});}).call(this);
-</script><script data-bard-client-injected="true">(function(){'use strict';var h=typeof Object.defineProperties=="function"?Object.defineProperty:function(a,b,c){if(a==Array.prototype||a==Object.prototype)return a;a[b]=c.value;return a};function l(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var b=0;b<a.length;++b){var c=a[b];if(c&&c.Math==Math)return c}throw Error("Cannot find global object");}var n=l(this);
-function p(a,b){if(b)a:{var c=n;a=a.split(".");for(var d=0;d<a.length-1;d++){var e=a[d];if(!(e in c))break a;c=c[e]}a=a[a.length-1];d=c[a];b=b(d);b!=d&&b!=null&&h(c,a,{configurable:!0,writable:!0,value:b})}}function r(a){function b(d){return a.next(d)}function c(d){return a.throw(d)}return new Promise(function(d,e){function f(g){g.done?d(g.value):Promise.resolve(g.value).then(b,c).then(f,e)}f(a.next())})}function t(a){return r(a())}
-p("Object.values",function(a){return a?a:function(b){var c=[],d;for(d in b)Object.prototype.hasOwnProperty.call(b,d)&&c.push(b[d]);return c}});p("Array.prototype.includes",function(a){return a?a:function(b,c){var d=this;d instanceof String&&(d=String(d));var e=d.length;c=c||0;for(c<0&&(c=Math.max(c+e,0));c<e;c++){var f=d[c];if(f===b||Object.is(f,b))return!0}return!1}});/*
-
- MIT License
-
- Copyright (c) 2017-2023 W.Y.
-
- Permission is hereby granted, free of charge, to any person obtaining a copy
- of this software and associated documentation files (the "Software"), to deal
- in the Software without restriction, including without limitation the rights
- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- copies of the Software, and to permit persons to whom the Software is
- furnished to do so, subject to the following conditions:
-
- The above copyright notice and this permission notice shall be included in
- all copies or substantial portions of the Software.
-
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- SOFTWARE.
-
-*/
-function u(a,b){var c=a.style;b.backgroundColor&&(c.backgroundColor=b.backgroundColor);b.width&&(c.width=`${b.width}px`);b.height&&(c.height=`${b.height}px`);var d=b.style;d!=null&&Object.keys(d).forEach(e=>{c[e]=d[e]})};var v=(()=>{var a=0;return()=>{a+=1;return`u${`0000${(Math.random()*1679616<<0).toString(36)}`.slice(-4)}${a}`}})();function w(a){var b=[];for(let c=0,d=a.length;c<d;c++)b.push(a[c]);return b}let x=null;function y(a={}){return x?x:a.u?x=a.u:x=w(window.getComputedStyle(document.documentElement))}function z(a,b){return(a=(a.ownerDocument.defaultView||window).getComputedStyle(a).getPropertyValue(b))?parseFloat(a.replace("px","")):0}
-function A(a,b={}){var c;if(!(c=b.width)){c=z(a,"border-left-width");var d=z(a,"border-right-width");c=a.clientWidth+c+d}(b=b.height)||(b=z(a,"border-top-width"),d=z(a,"border-bottom-width"),b=a.clientHeight+b+d);return{width:c,height:b}}function B(a){return new Promise((b,c)=>{var d=new Image;d.onload=()=>{d.decode().then(()=>{requestAnimationFrame(()=>b(d))})};d.onerror=c;d.crossOrigin="anonymous";d.decoding="async";d.src=a})}
-function C(a){return t(function*(){return Promise.resolve().then(()=>(new XMLSerializer).serializeToString(a)).then(encodeURIComponent).then(b=>`data:image/svg+xml;charset=utf-8,${b}`)})}
-function D(a,b,c){return t(function*(){var d=document.createElementNS("http://www.w3.org/2000/svg","svg"),e=document.createElementNS("http://www.w3.org/2000/svg","foreignObject");d.setAttribute("width",`${b}`);d.setAttribute("height",`${c}`);d.setAttribute("viewBox",`0 0 ${b} ${c}`);e.setAttribute("width","100%");e.setAttribute("height","100%");e.setAttribute("x","0");e.setAttribute("y","0");e.setAttribute("externalResourcesRequired","true");d.appendChild(e);e.appendChild(a);return C(d)})}
-var E=(a,b)=>{if(a instanceof b)return!0;a=Object.getPrototypeOf(a);return a===null?!1:a.constructor.name===b.name||E(a,b)};function F(a,b){return y(b).map(c=>{var d=a.getPropertyValue(c),e=a.getPropertyPriority(c);return`${c}: ${d}${e?" !important":""};`}).join(" ")}
-function G(a,b,c,d){a=window.getComputedStyle(a,c);var e=a.getPropertyValue("content");if(e!==""&&e!=="none"){var f=v();try{b.className=`${b.className} ${f}`}catch(k){return}e=document.createElement("style");var g=e.appendChild;c=`.${f}:${c}`;a.cssText?(d=a.getPropertyValue("content"),d=`${a.cssText} content: '${d.replace(/'|"/g,"")}';`):d=F(a,d);g.call(e,document.createTextNode(`${c}{${d}}`));b.appendChild(e)}};function H(a){return a.search(/^(data:)/)!==-1}function I(a,b,c){return t(function*(){var d=yield fetch(a,b);if(d.status===404)throw Error(`Resource "${d.url}" not found`);var e=yield d.blob();return new Promise((f,g)=>{var k=new FileReader;k.onerror=g;k.onloadend=()=>{try{f(c({v:d,result:k.result}))}catch(m){g(m)}};k.readAsDataURL(e)})})}const J={};function aa(a,b,c){var d=a.replace(/\?.*/,"");c&&(d=a);/ttf|otf|eot|woff2?/i.test(d)&&(d=d.replace(/.*\//,""));return b?`[${b}]${d}`:d}
-function K(a,b,c){return t(function*(){var d=aa(a,b,c.F);if(J[d]!=null)return J[d];c.B&&(a+=(/\?/.test(a)?"&":"?")+(new Date).getTime());try{let f=yield I(a,c.l,({v:g,result:k})=>{b||(b=g.headers.get("Content-Type")||"");return k.split(/,/)[1]});var e=`data:${b};base64,${f}`}catch(f){e=c.o||""}return J[d]=e})};const L={R:"application/font-woff",S:"application/font-woff",O:"application/font-truetype",C:"application/vnd.ms-fontobject",J:"image/png",H:"image/jpeg",G:"image/jpeg",D:"image/gif",N:"image/tiff",M:"image/svg+xml",P:"image/webp"};function M(a){return(a=/\.([^./]*?)$/g.exec(a))?a[1]:""};function ba(a){return t(function*(){var b=a.toDataURL();return b==="data:,"?a.cloneNode(!1):B(b)})}function ca(a,b){return t(function*(){if(a.currentSrc){var c=document.createElement("canvas");let d=c.getContext("2d");c.width=a.clientWidth;c.height=a.clientHeight;d==null||d.drawImage(a,0,0,c.width,c.height);c=c.toDataURL();return B(c)}c=a.poster;c=yield K(c,L[M(c).toLowerCase()]||"",b);return B(c)})}
-function da(a,b){return t(function*(){try{let c;if(a==null?0:(c=a.contentDocument)==null?0:c.body)return yield N(a.contentDocument.body,b,!0)}catch(c){}return a.cloneNode(!1)})}function ea(a,b){return t(function*(){return E(a,HTMLCanvasElement)?ba(a):E(a,HTMLVideoElement)?ca(a,b):E(a,HTMLIFrameElement)?da(a,b):a.cloneNode(a.tagName!=null&&a.tagName.toUpperCase()==="SVG")})}
-function fa(a,b,c){return t(function*(){if(b.tagName!=null&&b.tagName.toUpperCase()==="SVG")return b;var d=[];if(a.tagName!=null&&a.tagName.toUpperCase()==="SLOT"&&a.assignedNodes)d=w(a.assignedNodes());else{let e;if(E(a,HTMLIFrameElement)&&((e=a.contentDocument)==null?0:e.body))d=w(a.contentDocument.body.childNodes);else{let f;d=w(((f=a.shadowRoot)!=null?f:a).childNodes)}}if(d.length===0||E(a,HTMLVideoElement))return b;yield d.reduce((e,f)=>e.then(()=>N(f,c)).then(g=>{g&&b.appendChild(g)}),Promise.resolve());
-return b})}function ha(a,b,c){var d=b.style;if(d){var e=window.getComputedStyle(a);e.cssText?(d.cssText=e.cssText,d.transformOrigin=e.transformOrigin):y(c).forEach(f=>{var g=e.getPropertyValue(f);f==="font-size"&&g.endsWith("px")&&(g=`${Math.floor(parseFloat(g.substring(0,g.length-2)))-.1}px`);E(a,HTMLIFrameElement)&&f==="display"&&g==="inline"&&(g="block");f==="d"&&b.getAttribute("d")&&(g=`path(${b.getAttribute("d")})`);d.setProperty(f,g,e.getPropertyPriority(f))})}}
-function ia(a,b){E(a,HTMLSelectElement)&&(b=Array.from(b.children).find(c=>a.value===c.getAttribute("value")))&&b.setAttribute("selected","")}
-function ja(a,b){return t(function*(){var c=a.querySelectorAll?a.querySelectorAll("use"):[];if(c.length===0)return a;var d={};for(var e=0;e<c.length;e++){var f=c[e].getAttribute("xlink:href");if(f){let g=document.querySelector(f);a.querySelector(f)||!g||d[f]||(d[f]=yield N(g,b,!0))}}c=Object.values(d);if(c.length){d=document.createElementNS("http://www.w3.org/1999/xhtml","svg");d.setAttribute("xmlns","http://www.w3.org/1999/xhtml");d.style.position="absolute";d.style.width="0";d.style.height="0";
-d.style.overflow="hidden";d.style.display="none";e=document.createElementNS("http://www.w3.org/1999/xhtml","defs");d.appendChild(e);for(f=0;f<c.length;f++)e.appendChild(c[f]);a.appendChild(d)}return a})}
-function N(a,b,c){return t(function*(){return c||!b.filter||b.filter(a)?Promise.resolve(a).then(d=>ea(d,b)).then(d=>fa(a,d,b)).then(d=>{E(d,Element)&&(ha(a,d,b),G(a,d,":before",b),G(a,d,":after",b),E(a,HTMLTextAreaElement)&&(d.textContent=a.value),E(a,HTMLInputElement)&&d.setAttribute("value",a.value),ia(a,d));return d}).then(d=>ja(d,b)):null})};const O=/url\((['"]?)([^'"]+?)\1\)/g,ka=/url\([^)]+\)\s*format\((["']?)([^"']+)\1\)/g,la=/src:\s*(?:url\([^)]+\)\s*format\([^)]+\)[,;]\s*)+/g;function ma(a){var b=[];a.replace(O,(c,d,e)=>{b.push(e);return c});return b.filter(c=>!H(c))}
-function na(a,b,c,d){return t(function*(){try{let e=c?(new URL(b,c||void 0)).toString():b,f;f=yield K(e,L[M(b).toLowerCase()]||"",d);return a.replace(new RegExp(`(url\\(['"]?)(${b.replace(/([.*+?^${}()|\[\]\/\\])/g,"\\$1")})(['"]?\\))`,"g"),`$1${f}$3`)}catch(e){}return a})}function oa(a,{K:b}){return b?a.replace(la,c=>{for(;;){let [d,,e]=ka.exec(c)||[];if(!e)return"";if(e===b)return`src: ${d};`}}):a}
-function P(a,b,c){return t(function*(){if(a.search(O)===-1)return a;var d=oa(a,c);return ma(d).reduce((e,f)=>e.then(g=>na(g,f,b,c)),Promise.resolve(d))})};function Q(a,b,c){return t(function*(){var d,e=(d=b.style)==null?void 0:d.getPropertyValue(a);return e?(d=yield P(e,null,c),b.style.setProperty(a,d,b.style.getPropertyPriority(a)),!0):!1})}function pa(a,b){return t(function*(){(yield Q("background",a,b))||(yield Q("background-image",a,b));(yield Q("mask",a,b))||(yield Q("-webkit-mask",a,b))||(yield Q("mask-image",a,b))||(yield Q("-webkit-mask-image",a,b))})}
-function qa(a,b){return t(function*(){var c=E(a,HTMLImageElement);if(c&&!H(a.src)||E(a,SVGImageElement)&&!H(a.href.baseVal)){var d=c?a.src:a.href.baseVal,e=yield K(d,L[M(d).toLowerCase()]||"",b);yield new Promise((f,g)=>{a.onload=f;a.onerror=b.h?(...k)=>{try{f(b.h(...k))}catch(m){g(m)}}:g;a.decode&&(a.decode=f);a.loading==="lazy"&&(a.loading="eager");c?(a.srcset="",a.src=e):a.href.baseVal=e})}})}
-function ra(a,b){return t(function*(){var c=w(a.childNodes).map(d=>R(d,b));yield Promise.all(c).then(()=>a)})}function R(a,b){return t(function*(){E(a,Element)&&(yield pa(a,b),yield qa(a,b),yield ra(a,b))})};const S={};function T(a){return t(function*(){var b=S[a];if(b!=null)return b;b=yield(yield fetch(a)).text();b={url:a,cssText:b};return S[a]=b})}function U(a,b){return t(function*(){var c=a.cssText,d=/url\(["']?([^"')]+)["']?\)/g,e=(c.match(/url\([^)]+\)/g)||[]).map(f=>t(function*(){var g=f.replace(d,"$1");g.startsWith("https://")||(g=(new URL(g,a.url)).href);return I(g,b.l,({result:k})=>{c=c.replace(f,`url(${k})`);return[f,k]})}));return Promise.all(e).then(()=>c)})}
-function V(a){if(a==null)return[];var b=[];a=a.replace(/(\/\*[\s\S]*?\*\/)/gi,"");for(var c=RegExp("((@.*?keyframes [\\s\\S]*?){([\\s\\S]*?}\\s*?)})","gi");;){var d=c.exec(a);if(d===null)break;b.push(d[0])}a=a.replace(c,"");c=/@import[\s\S]*?url\([^)]*\)[\s\S]*?;/gi;for(d=RegExp("((\\s*?(?:\\/\\*[\\s\\S]*?\\*\\/)?\\s*?@media[\\s\\S]*?){([\\s\\S]*?)}\\s*?})|(([\\s\\S]*?){([\\s\\S]*?)})","gi");;){let e=c.exec(a);if(e===null)if(e=d.exec(a),e===null)break;else c.lastIndex=d.lastIndex;else d.lastIndex=
-c.lastIndex;b.push(e[0])}return b}
-function sa(a,b){return t(function*(){var c=[],d=[];a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach((f,g)=>{if(f.type===CSSRule.IMPORT_RULE){let k=g+1;f=T(f.href).then(m=>U(m,b)).then(m=>V(m).forEach(q=>{try{e.insertRule(q,q.startsWith("@import")?k+=1:e.cssRules.length)}catch(Fa){}})).catch(()=>{});d.push(f)}})}catch(f){let g=a.find(k=>k.href==null)||document.styleSheets[0];e.href!=null&&d.push(T(e.href).then(k=>U(k,b)).then(k=>V(k).forEach(m=>{g.insertRule(m,g.cssRules.length)})).catch(()=>
-{}))}});return Promise.all(d).then(()=>{a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach(f=>{c.push(f)})}catch(f){}});return c})})}function ta(a){return a.filter(b=>b.type===CSSRule.FONT_FACE_RULE).filter(b=>b.style.getPropertyValue("src").search(O)!==-1)}function ua(a,b){return t(function*(){if(a.ownerDocument==null)throw Error("Provided element is not within a Document");var c=w(a.ownerDocument.styleSheets);c=yield sa(c,b);return ta(c)})}
-function va(a){function b(d){(d.style.fontFamily||getComputedStyle(d).fontFamily).split(",").forEach(e=>{c.add(e.trim().replace(/["']/g,""))});Array.from(d.children).forEach(e=>{e instanceof HTMLElement&&b(e)})}var c=new Set;b(a);return c}function wa(a,b){return t(function*(){var c=yield ua(a,b),d=va(a);return(yield Promise.all(c.filter(e=>d.has(e.style.fontFamily.trim().replace(/["']/g,""))).map(e=>P(e.cssText,e.parentStyleSheet?e.parentStyleSheet.href:null,b)))).join("\n")})}
-function xa(a,b){return t(function*(){var c=b.m!=null?b.m:b.A?null:yield wa(a,b);if(c){let d=document.createElement("style");d.appendChild(document.createTextNode(c));a.firstChild?a.insertBefore(d,a.firstChild):a.appendChild(d)}})};function ya(a,b={}){return t(function*(){var {width:c,height:d}=A(a,b),e=yield N(a,b,!0);yield xa(e,b);yield R(e,b);u(e,b);return yield D(e,c,d)})}
-function za(a,b={}){return t(function*(){var {width:c,height:d}=A(a,b),e=yield ya(a,b);e=yield B(e);var f=document.createElement("canvas"),g=f.getContext("2d"),k=b.I||window.devicePixelRatio||1,m=b.j||c,q=b.i||d;f.width=m*k;f.height=q*k;!b.L&&(f.width>16384||f.height>16384)&&(f.width>16384&&f.height>16384?f.width>f.height?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384):f.width>16384?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384));
-f.style.width=`${m}`;f.style.height=`${q}`;b.backgroundColor&&(g.fillStyle=b.backgroundColor,g.fillRect(0,0,f.width,f.height));g.drawImage(e,0,0,f.width,f.height);return f})}function Aa(a,b={}){return t(function*(){return(yield za(a,b)).toDataURL()})};const Ba=["gemini.google.com","corp.google.com","proxy.googlers.com"];function W(){return document.body.querySelectorAll('[class*="animate"]').length>0}function X(a,b){var c=document.createElement("canvas");c.width=a;c.height=b;return c.toDataURL("image/png")}const Y=X(1,1);
-function Z(a){return t(function*(){try{return yield Aa(a,{j:a.offsetWidth,i:a.offsetHeight,A:!0,filter:b=>{if(b.tagName==="IMG"){let c=b.getAttribute("src");if(!c||c.trim()===""||b.style.display==="none")return!1}return!0},o:Y,h:()=>Y})}catch(b){return X(a.offsetWidth,a.offsetHeight)}})}
-function Ca(){return t(function*(){var a=document.body.offsetWidth,b=document.body.offsetHeight,c=document.body.cloneNode(!0);c.querySelectorAll('[class*="animate"]').forEach(d=>{d.classList.remove(...Array.from(d.classList).filter(e=>e.startsWith("animate")))});c.style.width=`${a}px`;c.style.height=`${b}px`;return c})}
-function Da(a){return t(function*(){var b=document.body;if(W()){var c=yield Ca();b=c;document.body.appendChild(c)}c=yield Z(b);W()&&document.body.removeChild(b);window.parent.postMessage({type:"SEND_SCREENSHOT",image:c,topOffset:document.documentElement.scrollTop},a.origin)})}function Ea(a){return t(function*(){var b={type:"SEND_SCREENSHOT_FOR_DATA_VISUALIZATION",image:yield Z(document.body),topOffset:0};window.parent.postMessage(b,a.origin)})}
-window.addEventListener("message",a=>t(function*(){if(Ba.some(c=>a.origin.includes(c))){var b=a.data;b&&(b.type==="MAKE_SCREENSHOT"&&(yield Da(a)),b.type==="MAKE_SCREENSHOT_FOR_DATA_VISUALIZATION"&&(yield Ea(a)))}}));
-})();</script><script data-bard-client-injected="true">(function() {
-  // Ensure this script is executed only once
-  if (window.firebaseAuthBridgeScriptLoaded) {
-    return;
-  }
-  window.firebaseAuthBridgeScriptLoaded = true;
-
-  let nextTokenPromiseId = 0;
-
-  // Stores { resolve, reject } for ongoing token requests
-  const pendingTokenPromises = {};
-
-  // Listen for messages from the Host Application
-  window.addEventListener('message', function(event) {
-
-    const messageData = event.data;
-
-  if (messageData && messageData.type === 'RESOLVE_NEW_FIREBASE_TOKEN') {
-      const { success, token, error, promiseId } = messageData ?? {};
-      if (pendingTokenPromises[promiseId]) {
-        if (success) {
-          pendingTokenPromises[promiseId].resolve(token);
-        } else {
-          pendingTokenPromises[promiseId].reject(new Error(error || 'Token refresh failed from host.'));
-        }
-        delete pendingTokenPromises[promiseId];
-      }
-    }
-  });
-
-  // Expose a function for the Generated App to request a new Firebase token
-  window.requestNewFirebaseToken = function() {
-    const currentPromiseId = nextTokenPromiseId++;
-    const promise = new Promise((resolve, reject) => {
-      pendingTokenPromises[currentPromiseId] = { resolve, reject };
-    });
-    if (window.parent && window.parent !== window) {
-      window.parent.postMessage({
-        type: 'REQUEST_NEW_FIREBASE_TOKEN',
-        promiseId: currentPromiseId
-      }, '*');
-    } else {
-      pendingTokenPromises[currentPromiseId].reject(new Error('No parent window to request token from.'));
-      delete pendingTokenPromises[currentPromiseId];
-    }
-    return promise;
-  };
-})();</script><script data-bard-client-injected="true">
-let realOriginalGetUserMedia = null;
-if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-  realOriginalGetUserMedia = navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices);
-}
-
-(function() {
-  if (navigator.mediaDevices && navigator.mediaDevices.__proto__) {
-    try {
-      Object.defineProperty(navigator.mediaDevices.__proto__, 'getUserMedia', {
-        get: function() {
-          return undefined; // Or throw an error
-        },
-        configurable: false
-      });
-    } catch (error) {
-      console.error("Error defining prototype getter:", error);
-    }
-  }
-})();
-
-(function() {
-  const pendingMediaResolvers = {};
-  let nextMediaPromiseId = 0;
-
-  function requestMediaPermissions(constraints) {
-    const mediaPromiseId = nextMediaPromiseId++;
-    const promise = new Promise((resolve, reject) => {
-      pendingMediaResolvers[mediaPromiseId] = (granted) => {
-        delete pendingMediaResolvers[mediaPromiseId];
-        resolve(granted);
-      };
-    });
-
-    window.parent.postMessage({
-      type: 'requestMediaPermission',
-      constraints: constraints,
-      promiseId: mediaPromiseId,
-    }, '*');
-
-    return promise;
-  }
-
-  let originalGetUserMedia = realOriginalGetUserMedia;
-
-  function interceptGetUserMedia() {
-    if (navigator.mediaDevices) {
-      Object.defineProperty(navigator.mediaDevices, 'getUserMedia', {
-        value: function(constraints) {
-          return requestMediaPermissions(constraints).then((granted) => {
-            if (granted) {
-              if (originalGetUserMedia) {
-                return originalGetUserMedia(constraints);
-              } else {
-                throw new Error("Original getUserMedia not available.");
-              }
-            } else {
-              throw new DOMException('Permission denied', 'NotAllowedError');
-            }
-          });
-        },
-        writable: false,
-        configurable: false
-      });
-    }
-  }
-
-  interceptGetUserMedia();
-
-  const observer = new MutationObserver(function(mutationsList, observer) {
-    for (const mutation of mutationsList) {
-      if (mutation.type === 'reconfigured' && mutation.name === 'getUserMedia' && mutation.object === navigator.mediaDevices) {
-        interceptGetUserMedia();
-      } else if (mutation.type === 'attributes' && mutation.attributeName === 'getUserMedia' && mutation.target === navigator.mediaDevices) {
-        interceptGetUserMedia();
-      } else if (mutation.type === 'childList' && mutation.addedNodes) {
-        mutation.addedNodes.forEach(node => {
-          if (node === navigator.mediaDevices) {
-            interceptGetUserMedia();
-          }
-        });
-      }
-    }
-  });
-
-  function interceptSpeechRecognition() {
-    if (!window.SpeechRecognition && !window.webkitSpeechRecognition) {
-      return;
-    }
-
-    const OriginalSpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-
-    const SpeechRecognitionWrapper = function(...args) {
-      const recognizer = new OriginalSpeechRecognition(...args);
-      const originalStart = recognizer.start.bind(recognizer);
-
-      recognizer.start = function() {
-        requestMediaPermissions({ audio: true }).then(granted => {
-          if (granted) {
-            originalStart();
-          } else {
-            const errorEvent = new SpeechRecognitionErrorEvent('error');
-            errorEvent.error = 'not-allowed'; // This is the standard error for permission denial.
-            recognizer.dispatchEvent(errorEvent);
-          }
-        });
-      };
-
-      return recognizer;
-    };
-
-    SpeechRecognitionWrapper.prototype = OriginalSpeechRecognition.prototype;
-    SpeechRecognitionWrapper.prototype.constructor = SpeechRecognitionWrapper;
-
-    if (window.SpeechRecognition) {
-      window.SpeechRecognition = SpeechRecognitionWrapper;
-    }
-    if (window.webkitSpeechRecognition) {
-      window.webkitSpeechRecognition = SpeechRecognitionWrapper;
-    }
-  }
-
-  interceptSpeechRecognition();
-
-  window.addEventListener('message', function(event) {
-    if (event.data) {
-      if (event.data.type === 'resolveMediaPermission') {
-        const { promiseId, granted } = event.data;
-        if (pendingMediaResolvers[promiseId]) {
-          pendingMediaResolvers[promiseId](granted);
-        }
-      }
-    }
-  });
-
-})();</script><script ws-interception-config="{&quot;parentOrigin&quot;:&quot;https://gemini.google.com&quot;,&quot;proxiedDomains&quot;:[]}" data-bard-client-injected="true">(function(){'use strict';var u=typeof Object.defineProperties=="function"?Object.defineProperty:function(b,d,e){if(b==Array.prototype||b==Object.prototype)return b;b[d]=e.value;return b};function v(b){b=["object"==typeof globalThis&&globalThis,b,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var d=0;d<b.length;++d){var e=b[d];if(e&&e.Math==Math)return e}throw Error("Cannot find global object");}var w=v(this);
-function y(b,d){if(d)a:{var e=w;b=b.split(".");for(var h=0;h<b.length-1;h++){var k=b[h];if(!(k in e))break a;e=e[k]}b=b[b.length-1];h=e[b];d=d(h);d!=h&&d!=null&&u(e,b,{configurable:!0,writable:!0,value:d})}}function z(b){function d(h){return b.next(h)}function e(h){return b.throw(h)}return new Promise(function(h,k){function m(n){n.done?h(n.value):Promise.resolve(n.value).then(d,e).then(m,k)}m(b.next())})}y("globalThis",function(b){return b||w});/*
-
- Copyright The Closure Library Authors.
- SPDX-License-Identifier: Apache-2.0
-*/
-function A(b,d){function e(){}e.prototype=d.prototype;b.j=d.prototype;b.prototype=new e;b.prototype.constructor=b;b.h=function(h,k,m){for(var n=Array(arguments.length-2),p=2;p<arguments.length;p++)n[p-2]=arguments[p];return d.prototype[k].apply(h,n)}};function B(b,d,e="*"){function h(a){if(typeof a==="string")return F.encode(a).buffer;if(a instanceof ArrayBuffer)return a.slice(0);if(ArrayBuffer.isView(a))return a.buffer.slice(a.byteOffset,a.byteOffset+a.byteLength);throw Error("Invalid data type");}function k(a){a=h(a);var f={type:"send",data:new Uint8Array(a)},g;(g=r)==null||g.postMessage(f,[a])}function m(){if(!r)throw Error("Data port not captured yet.");r.onmessage=a=>{if(a.data.type==="message"){a=new MessageEvent("message",{data:G.decode(a.data.data)});
-let f;(f=c.onmessage)==null||f.call(c,a);c.dispatchEvent(a)}}}function n(){if(!t)throw Error("Control port not captured yet.");t.onmessage=a=>{switch(a.data.type){case "open":l=1;var f=new Event("open"),g;(g=c.onopen)==null||g.call(c,f);c.dispatchEvent(f);q.forEach(H=>{k(H)});q=[];break;case "close":g=a.data;l=3;g=new CloseEvent("close",{code:g.code,reason:g.reason,wasClean:g.wasClean});(f=c.onclose)==null||f.call(c,g);c.dispatchEvent(g);break;case "error":l=3;f=new Event("error");let x;(x=c.onerror)==
-null||x.call(c,f);c.dispatchEvent(f)}}}function p(a){return z(function*(){var f=new MessageChannel;t=f.port1;var g=new MessageChannel;r=g.port1;n();m();window.parent.postMessage({type:"websocket_open",portOrdering:["control","data"],url:b,protocols:a||[],connectionId:I},e,[f.port2,g.port2])}())}var c=Reflect.construct(EventTarget,[],new.target);c.CONNECTING=0;c.OPEN=1;c.CLOSING=2;c.CLOSED=3;c.url=b;c.binaryType="arraybuffer";c.protocol="";c.i="";var l=0,t=null,r=null,q=[],F=new TextEncoder,G=new TextDecoder;
-c.onopen=null;c.onmessage=null;c.onclose=null;c.onerror=null;Object.defineProperty(c,"readyState",{get:()=>l,enumerable:!0,configurable:!0});Object.defineProperty(c,"bufferedAmount",{get:()=>{var a=0;q.forEach(f=>{a+=typeof f==="string"?f.length:f.byteLength});return a},enumerable:!0,configurable:!0});var I=function(){var a;return((a=globalThis.crypto)==null?0:a.randomUUID)?globalThis.crypto.randomUUID():"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,f=>{var g=Math.random()*16|0;return(f===
-"x"?g:g&3|8).toString(16)})}();c.send=a=>{if(l===1)a instanceof Blob?a.arrayBuffer().then(f=>{k(f)}):k(a);else if(l===0)if(typeof a==="string")q.push(a);else if(a instanceof ArrayBuffer||ArrayBuffer.isView(a))q.push(h(a));else throw Error("Sending Blob is not supported before the connection is open.");else console.debug("WebSocket send called in CLOSING or CLOSED state; ignored.")};c.close=(a=1E3,f="")=>{if(l!==2&&l!==3){l=2;a={type:"close",code:a,reason:f,wasClean:a===1E3};var g;(g=t)==null||g.postMessage(a)}};
-Promise.resolve().then(()=>p(d));return c}A(B,EventTarget);var C=document.currentScript,D=C==null?void 0:C.getAttribute("ws-interception-config");if(!D)throw Error("WebSocket Interceptor: Missing ws-interception-config attribute in the script tag.");var E=JSON.parse(D);if(!E.parentOrigin||typeof E.parentOrigin!=="string")throw Error("WebSocket Interceptor: Invalid parentOrigin in ws-interception-config");
-(function(b){var d=Object.getOwnPropertyDescriptor(window,"WebSocket");if(!d||d.writable||d.configurable)d=Object.assign(function(e,h){try{let k=(new URL(e)).hostname;if(b.proxiedDomains.some(m=>k===m||k.endsWith(`.${m}`)))return new B(e,h,b.parentOrigin)}catch(k){throw window.parent.postMessage({type:"websocket_blocked",url:e,reason:"blocked_invalid_url"},b.parentOrigin),new DOMException(`WebSocket connection to '${e}' is not allowed in Canvas.`,"SecurityError");}window.parent.postMessage({type:"websocket_blocked",
-url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMException(`WebSocket connection to '${e}' is not allowed in Canvas.`,"SecurityError");},{CONNECTING:0,OPEN:1,CLOSING:2,CLOSED:3}),Object.defineProperty(window,"WebSocket",{value:d,writable:!1,configurable:!1})})({proxiedDomains:E.proxiedDomains||[],parentOrigin:E.parentOrigin});}).call(this);
-</script><script data-bard-client-injected="true">((function(modelInformation) {
-  const originalFetch = window.fetch;
-  // TODO: b/421908508 - Move these out of the script and match all generative AI model calls.
-  let googleLlmBaseApiUrls = [
-    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':streamGenerateContent',
-    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':generateContent',
-    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predict',
-    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predictLongRunning',
-    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageEditModelName + ':generateContent',
-    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageTransformModelName + ':generateContent',
-    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predict',
-    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predictLongRunning',
-    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.ttsModelName + ':generateContent',
-  ];
-  modelInformation.deprecatedTextModelNames.forEach((modelName) => {
-    googleLlmBaseApiUrls.push(
-      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
-      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
-    );
-  });
-  modelInformation.deprecatedImageModelNames.forEach((modelName) => {
-    googleLlmBaseApiUrls.push(
-      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predict',
-      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predictLongRunning',
-      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
-      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
-    );
-  });
-  modelInformation.deprecatedGenerateImageModelNames.forEach((modelName) => {
-    googleLlmBaseApiUrls.push(
-      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
-      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
-    );
-  });
-  modelInformation.deprecatedImageTransformModelNames.forEach((modelName) => {
-    googleLlmBaseApiUrls.push(
-      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
-      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
-    );
-  });
-
-  const pendingFetchResolvers = {};
-  let nextPromiseId = 0;
-
-  function handleStringInput(input, optionsArgument) {
-    const actualUrl = input;
-    const fetchCallArgs = [actualUrl, optionsArgument];
-    const effectiveOptions = optionsArgument || {};
-    const bodyForApiKeyCheck = effectiveOptions.body;
-    const bodyForPostMessage = effectiveOptions.body;
-    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
-  }
-
-  function handleRequestInput(input, optionsArgument) {
-    const actualUrl = input.url;
-    const fetchCallArgs = [input, optionsArgument];
-    const effectiveOptions = { method: input.method, headers: new Headers(input.headers) };
-    let bodyForApiKeyCheck;
-    let bodyForPostMessage;
-
-    if (optionsArgument) {
-      if (optionsArgument.method) effectiveOptions.method = optionsArgument.method;
-      if (optionsArgument.headers) effectiveOptions.headers = new Headers(optionsArgument.headers);
-      if ('body' in optionsArgument) {
-        bodyForApiKeyCheck = optionsArgument.body;
-        bodyForPostMessage = optionsArgument.body;
-      } else {
-        bodyForApiKeyCheck = undefined;
-        bodyForPostMessage = input.body;
-      }
-    } else {
-      bodyForApiKeyCheck = undefined;
-      bodyForPostMessage = input.body;
-    }
-    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
-  }
-
-  window.fetch = function(input, optionsArgument) {
-    let actualUrl;
-    let fetchCallArgs;
-    let effectiveOptions = {};
-    let bodyForApiKeyCheck;
-    let bodyForPostMessage;
-
-    if (typeof input === 'string') {
-      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleStringInput(input, optionsArgument));
-    } else if (input instanceof Request) {
-      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleRequestInput(input, optionsArgument));
-    } else {
-      return originalFetch.apply(window, [input, optionsArgument]);
-    }
-
-    effectiveOptions.method = effectiveOptions.method || 'GET';
-    if (!effectiveOptions.headers) {
-      effectiveOptions.headers = new Headers();
-    }
-
-
-    if (typeof actualUrl === 'string' && googleLlmBaseApiUrls.some((url) => actualUrl.startsWith(url))) {
-      let apiKeyIsNull = true;
-
-      const regex = new RegExp("models/([^:]+)");
-      const modelNameMatch = actualUrl.match(regex);
-      const modelName = modelNameMatch ? modelNameMatch[1] : 'unspecified';
-
-
-      try {
-        const urlObject = new URL(actualUrl);  // Use URL object for robust parsing
-        const apiKeyParam = urlObject.searchParams.get('key');
-        if (apiKeyParam) {
-          apiKeyIsNull = false;
-        }
-      } catch (e) {
-        // Continue checks even if URL parsing fails
-      }
-
-      if (apiKeyIsNull && effectiveOptions.headers) {
-        const h = new Headers(effectiveOptions.headers);
-        const apiKeyHeaderValue = h.get('X-API-Key') || h.get('x-api-key');
-        if (apiKeyHeaderValue) {
-          apiKeyIsNull = false;
-          return originalFetch.apply(window, fetchCallArgs);
-        }
-      }
-
-      if (apiKeyIsNull && effectiveOptions.method && ['POST', 'PUT', 'PATCH'].includes(effectiveOptions.method.toUpperCase()) && typeof bodyForApiKeyCheck === 'string') {
-        try {
-          const bodyData = JSON.parse(bodyForApiKeyCheck);
-          if (bodyData && bodyData.apiKey) {
-            apiKeyIsNull = false;
-            return originalFetch.apply(window, fetchCallArgs);
-          }
-        } catch (e) {
-          // Ignore JSON parsing errors
-        }
-      }
-
-      if(apiKeyIsNull) {
-        const promiseId = nextPromiseId++;
-        const promise = new Promise((resolve) => {
-          pendingFetchResolvers[promiseId] = (resolvedResponse) => {
-            delete pendingFetchResolvers[promiseId];
-            resolve(resolvedResponse);
-          };
-        });
-
-        let serializedBodyForPostMessage;
-        if (typeof bodyForPostMessage === 'string' || bodyForPostMessage == null) {
-            serializedBodyForPostMessage = bodyForPostMessage;
-        } else if (bodyForPostMessage instanceof ReadableStream) {
-            serializedBodyForPostMessage = null;
-        } else {
-            try {
-                serializedBodyForPostMessage = JSON.stringify(bodyForPostMessage);
-            } catch (e) {
-                serializedBodyForPostMessage = null;
-            }
-        }
-
-        const messageOptions = {
-            method: effectiveOptions.method,
-            headers: Object.fromEntries(new Headers(effectiveOptions.headers).entries()),
-            body: serializedBodyForPostMessage
-        };
-
-        window.parent.postMessage({
-          type: 'requestFetch',
-          url: actualUrl,
-          modelName: modelName,
-          options: messageOptions,
-          promiseId: promiseId,
-        }, '*');
-
-        return promise;
-      }
-      return originalFetch.apply(window, fetchCallArgs);
-    }
-    return originalFetch.apply(window, fetchCallArgs);
-  };
-
-  window.addEventListener('message', function(event) {
-    if (event.data && event.data.type === 'resolveFetch') {
-      const { promiseId, response } = event.data;
-      if (pendingFetchResolvers[promiseId]) {
-        try {
-          const reconstructedResponse = new Response(response.body, {
-            status: response.status,
-            statusText: response.statusText,
-            headers: new Headers(response.headers),
-          });
-          pendingFetchResolvers[promiseId](reconstructedResponse);
-        } catch (error) {
-          pendingFetchResolvers[promiseId](new Response(null, { status: 500, statusText: "Interceptor Response Reconstruction Error" }));
-        }
-      }
-    }
-  });
-
-}))({"textModelName":"gemini-3-flash-preview","imageModelName":"imagen-4.0-generate-001","imageEditModelName":"gemini-3.1-flash-image","imageTransformModelName":"gemini-3-pro-image","videoModelName":"veo-2.0-generate-001","ttsModelName":"gemini-2.5-flash-preview-tts","deprecatedTextModelNames":["gemini-2.0-flash","gemini-2.5-flash","gemini-2.5-flash-preview-04-17","gemini-2.5-flash-preview-05-20","gemini-2.5-flash-preview-09-2025"],"deprecatedImageModelNames":["imagen-3.0-generate-001","imagen-3.0-generate-002"],"deprecatedGenerateImageModelNames":["gemini-2.5-flash-image-preview","gemini-2.5-flash-image","gemini-3.1-flash-image-preview"],"deprecatedImageTransformModelNames":["gemini-3-pro-image-preview-11-2025"]})</script><script data-bard-client-injected="true">(function(){'use strict';function a(){window.parent.postMessage({type:"interaction"},"*")}window.addEventListener("click",a,{capture:!0,passive:!0});window.addEventListener("touchstart",a,{capture:!0,passive:!0});window.addEventListener("keydown",a,{capture:!0,passive:!0});}).call(this);
-</script><script data-bard-client-injected="true">(function() {
-  const originalConsoleLog = console.log;
-  const originalConsoleError = console.error;
-
-    /**
-   * Normalizes an error event or a promise rejection reason into a structured error object.
-   * @param {*} errorEventOrReason The error object or reason.
-   * @return {object} Structured error data { message, name, stack }.
-   */
-  function getErrorObject(errorEventOrReason) {
-    if (errorEventOrReason instanceof Error) {
-      return {
-        message: errorEventOrReason.message,
-        name: errorEventOrReason.name,
-        stack: errorEventOrReason.stack,
-      };
-    }
-    // Fallback for non-Error objects.
-    try {
-      return {
-        message: JSON.stringify(errorEventOrReason),
-        name: 'UnknownErrorType',
-        stack: null,
-      };
-    } catch (e) {
-      return {
-        message: String(errorEventOrReason),
-        name: 'UnknownErrorTypeNonStringifiable',
-        stack: null,
-      };
-    }
-  }
-
-  /**
-   * Converts an array of arguments (from log/error) into a single string.
-   * Handles Error objects specially to include their message and stack.
-   * @param {Array<*>} args - Arguments passed to console methods.
-   * @return {string} A string representation of the arguments.
-   */
-  function stringifyArgs(args) {
-    return args
-      .map((arg) => {
-        if (arg instanceof Error) {
-          const {message, stack} = arg;
-          return `Error: ${message}${stack ? ('\nStack: ' + stack) : ''}`;
-        }
-        if (typeof arg === 'object' && arg !== null) {
-          try {
-            return JSON.stringify(arg);
-          } catch (error) {
-            return '[Circular Object]';
-          }
-        } else {
-          return String(arg);
-        }
-      })
-      .join(' ');
-  }
-
-  console.log = function(...args) {
-    const logString = stringifyArgs(args);
-    window.parent.postMessage({ type: 'log', message: logString }, '*');
-    originalConsoleLog.apply(console, args);
-  };
-
-  console.error = function(...args) {
-    let errorData;
-    if (args.length > 0 && args[0] instanceof Error) {
-      const err = args[0];
-      // If the first arg is an Error, capture its details.
-      errorData = {
-        type: 'error',
-        source: 'CONSOLE_ERROR',
-        ...getErrorObject(err),
-        rawArgsString: stringifyArgs(args.slice(1)),
-        timestamp: new Date().toISOString(),
-      };
-    } else {
-      // If not an Error object, treat all args as a general error message.
-      errorData = {
-        type: 'error',
-        source: 'CONSOLE_ERROR',
-        message: stringifyArgs(args),
-        name: 'ConsoleLoggedError',
-        stack: null,
-        timestamp: new Date().toISOString(),
-      };
-    }
-    window.parent.postMessage(errorData, '*');
-    originalConsoleError.apply(console, args);
-  };
-
-  // Listen for global unhandled synchronous errors.
-  window.addEventListener('error', function(event) {
-    const errorDetails = event.error ? getErrorObject(event.error) : {
-      message: event.message,
-      name: 'GlobalError',
-      stack: null,
-      filename: event.filename,
-      lineno: event.lineno,
-      colno: event.colno,
-    };
-
-    window.parent.postMessage({
-      type: 'error',
-      source: 'global',
-      ...errorDetails,
-      message: errorDetails.message || event.message,
-      timestamp: new Date().toISOString(),
-    }, '*');
-  });
-
-  // Listen for unhandled promise rejections (asynchronous errors).
-  window.addEventListener('unhandledrejection', function(event) {
-    const errorDetails = getErrorObject(event.reason);
-
-    window.parent.postMessage({
-      type: 'error',
-      source: 'unhandledrejection',
-      ...errorDetails,
-      message: errorDetails.message || 'Unhandled Promise Rejection',
-      timestamp: new Date().toISOString(),
-    }, '*');
-  });
-
-})();</script>
+<html lang="en" class="dark">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VIP Media Gallery - Exclusive HD Collection</title>
+    <title>VIP Media Gallery - HD Collection</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
@@ -607,59 +26,33 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
                         cardbg: '#161b26',
                         bordercolor: '#262d3d'
                     },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    }
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
                 }
             }
         }
     </script>
 
     <style>
-        body {
-            background-color: #0b0c10;
-            color: #f3f4f6;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .glow-effect {
-            box-shadow: 0 0 25px rgba(255, 0, 85, 0.4);
-        }
-
-        .card-glow:hover {
-            box-shadow: 0 10px 30px -10px rgba(255, 0, 85, 0.5);
-            border-color: rgba(255, 0, 85, 0.6);
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0b0c10;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #262d3d;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #ff0055;
-        }
+        body { background-color: #0b0c10; color: #f3f4f6; font-family: 'Inter', sans-serif; }
+        .card-glow:hover { box-shadow: 0 10px 30px -10px rgba(255, 0, 85, 0.5); border-color: rgba(255, 0, 85, 0.6); }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0b0c10; }
+        ::-webkit-scrollbar-thumb { background: #262d3d; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #ff0055; }
     </style>
 
     <!-- Popunder Ad Script -->
     <script src="https://pl30761942.effectivecpmnetwork.com/c8/17/88/c81788b8748c5c0a12241805299e9328.js"></script>
     
-    <!-- Social Bar / Banner Script -->
+    <!-- Social Bar Script -->
     <script src="https://pl30761944.effectivecpmnetwork.com/a7/23/aa/a723aa4faaf211da9d6bd59adccc63d2.js"></script>
-<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Inter, sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.top-0{top:0px}.left-3{left:0.75rem}.top-1\/2{top:50%}.top-24{top:6rem}.bottom-0{bottom:0px}.left-0{left:0px}.right-0{right:0px}.-top-12{top:-3rem}.bottom-5{bottom:1.25rem}.right-4{right:1rem}.right-5{right:1.25rem}.top-4{top:1rem}.right-3{right:0.75rem}.top-3{top:0.75rem}.z-40{z-index:40}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.my-8{margin-top:2rem;margin-bottom:2rem}.-mt-1{margin-top:-0.25rem}.mb-1{margin-bottom:0.25rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mr-1{margin-right:0.25rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-2{margin-bottom:0.5rem}.mt-4{margin-top:1rem}.mt-1{margin-top:0.25rem}.mt-3{margin-top:0.75rem}.line-clamp-2{overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2}.block{display:block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-2{height:0.5rem}.h-20{height:5rem}.h-16{height:4rem}.h-8{height:2rem}.h-6{height:1.5rem}.h-12{height:3rem}.h-48{height:12rem}.h-full{height:100%}.max-h-\[70vh\]{max-height:70vh}.max-h-\[75vh\]{max-height:75vh}.min-h-\[90px\]{min-height:90px}.min-h-screen{min-height:100vh}.min-h-\[50px\]{min-height:50px}.min-h-\[300px\]{min-height:300px}.w-10{width:2.5rem}.w-2{width:0.5rem}.w-full{width:100%}.w-16{width:4rem}.w-8{width:2rem}.w-1\/2{width:50%}.w-6{width:1.5rem}.w-auto{width:auto}.w-12{width:3rem}.max-w-7xl{max-width:80rem}.max-w-sm{max-width:24rem}.max-w-2xl{max-width:42rem}.max-w-4xl{max-width:56rem}.max-w-lg{max-width:32rem}.max-w-md{max-width:28rem}.flex-1{flex:1 1 0%}.flex-grow{flex-grow:1}.-translate-y-1\/2{--tw-translate-y:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.translate-y-5{--tw-translate-y:1.25rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.scale-75{--tw-scale-x:.75;--tw-scale-y:.75;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite}@keyframes bounce{0%, 100%{transform:translateY(-25%);animation-timing-function:cubic-bezier(0.8,0,1,1)}50%{transform:none;animation-timing-function:cubic-bezier(0,0,0.2,1)}}.animate-bounce{animation:bounce 1s infinite}@keyframes spin{to{transform:rotate(360deg)}}.animate-spin{animation:spin 1s linear infinite}.cursor-pointer{cursor:pointer}.select-all{-webkit-user-select:all;user-select:all}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-5{gap:1.25rem}.gap-6{gap:1.5rem}.gap-1{gap:0.25rem}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.rounded-2xl{border-radius:1rem}.rounded-md{border-radius:0.375rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-dashed{border-style:dashed}.border-bordercolor{--tw-border-opacity:1;border-color:rgb(38 45 61 / var(--tw-border-opacity, 1))}.border-brand-500\/40{border-color:rgb(255 0 85 / 0.4)}.border-gray-700{--tw-border-opacity:1;border-color:rgb(55 65 81 / var(--tw-border-opacity, 1))}.border-white\/10{border-color:rgb(255 255 255 / 0.1)}.border-emerald-600{--tw-border-opacity:1;border-color:rgb(5 150 105 / var(--tw-border-opacity, 1))}.bg-cardbg{--tw-bg-opacity:1;background-color:rgb(22 27 38 / var(--tw-bg-opacity, 1))}.bg-cardbg\/40{background-color:rgb(22 27 38 / 0.4)}.bg-darkbg\/90{background-color:rgb(11 12 16 / 0.9)}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.bg-brand-500{--tw-bg-opacity:1;background-color:rgb(255 0 85 / var(--tw-bg-opacity, 1))}.bg-brand-500\/10{background-color:rgb(255 0 85 / 0.1)}.bg-cardbg\/50{background-color:rgb(22 27 38 / 0.5)}.bg-darkbg\/50{background-color:rgb(11 12 16 / 0.5)}.bg-cardbg\/95{background-color:rgb(22 27 38 / 0.95)}.bg-indigo-600{--tw-bg-opacity:1;background-color:rgb(79 70 229 / var(--tw-bg-opacity, 1))}.bg-black\/80{background-color:rgb(0 0 0 / 0.8)}.bg-black\/85{background-color:rgb(0 0 0 / 0.85)}.bg-black\/90{background-color:rgb(0 0 0 / 0.9)}.bg-brand-500\/20{background-color:rgb(255 0 85 / 0.2)}.bg-darkbg{--tw-bg-opacity:1;background-color:rgb(11 12 16 / var(--tw-bg-opacity, 1))}.bg-darkbg\/70{background-color:rgb(11 12 16 / 0.7)}.bg-emerald-500\/20{background-color:rgb(16 185 129 / 0.2)}.bg-gray-800{--tw-bg-opacity:1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}.bg-gray-900\/80{background-color:rgb(17 24 39 / 0.8)}.bg-black\/60{background-color:rgb(0 0 0 / 0.6)}.bg-brand-500\/90{background-color:rgb(255 0 85 / 0.9)}.bg-emerald-600{--tw-bg-opacity:1;background-color:rgb(5 150 105 / var(--tw-bg-opacity, 1))}.bg-emerald-950{--tw-bg-opacity:1;background-color:rgb(2 44 34 / var(--tw-bg-opacity, 1))}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.bg-gradient-to-tr{background-image:linear-gradient(to top right, var(--tw-gradient-stops))}.bg-gradient-to-t{background-image:linear-gradient(to top, var(--tw-gradient-stops))}.from-brand-500{--tw-gradient-from:#ff0055 var(--tw-gradient-from-position);--tw-gradient-to:rgb(255 0 85 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-brand-600{--tw-gradient-from:#e11d48 var(--tw-gradient-from-position);--tw-gradient-to:rgb(225 29 72 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-emerald-600{--tw-gradient-from:#059669 var(--tw-gradient-from-position);--tw-gradient-to:rgb(5 150 105 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-amber-500{--tw-gradient-from:#f59e0b var(--tw-gradient-from-position);--tw-gradient-to:rgb(245 158 11 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-emerald-500{--tw-gradient-from:#10b981 var(--tw-gradient-from-position);--tw-gradient-to:rgb(16 185 129 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-cardbg{--tw-gradient-from:#161b26 var(--tw-gradient-from-position);--tw-gradient-to:rgb(22 27 38 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-rose-500{--tw-gradient-to:rgb(244 63 94 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #f43f5e var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-transparent{--tw-gradient-to:rgb(0 0 0 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), transparent var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-purple-600{--tw-gradient-to:#9333ea var(--tw-gradient-to-position)}.to-rose-600{--tw-gradient-to:#e11d48 var(--tw-gradient-to-position)}.to-teal-600{--tw-gradient-to:#0d9488 var(--tw-gradient-to-position)}.to-brand-500{--tw-gradient-to:#ff0055 var(--tw-gradient-to-position)}.to-transparent{--tw-gradient-to:transparent var(--tw-gradient-to-position)}.object-contain{object-fit:contain}.object-cover{object-fit:cover}.p-1{padding:0.25rem}.p-4{padding:1rem}.p-2\.5{padding:0.625rem}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-6{padding:1.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.py-16{padding-top:4rem;padding-bottom:4rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-8{padding-top:2rem;padding-bottom:2rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.pl-9{padding-left:2.25rem}.pr-4{padding-right:1rem}.pb-16{padding-bottom:4rem}.pt-4{padding-top:1rem}.pt-2{padding-top:0.5rem}.text-center{text-align:center}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-\[10px\]{font-size:10px}.text-base{font-size:1rem;line-height:1.5rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.text-2xl{font-size:1.5rem;line-height:2rem}.text-\[11px\]{font-size:11px}.text-\[9px\]{font-size:9px}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-semibold{font-weight:600}.font-extrabold{font-weight:800}.font-normal{font-weight:400}.uppercase{text-transform:uppercase}.tracking-wider{letter-spacing:0.05em}.tracking-widest{letter-spacing:0.1em}.text-brand-500{--tw-text-opacity:1;color:rgb(255 0 85 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-amber-400{--tw-text-opacity:1;color:rgb(251 191 36 / var(--tw-text-opacity, 1))}.text-emerald-300{--tw-text-opacity:1;color:rgb(110 231 183 / var(--tw-text-opacity, 1))}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153 / var(--tw-text-opacity, 1))}.text-gray-200{--tw-text-opacity:1;color:rgb(229 231 235 / var(--tw-text-opacity, 1))}.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-cyan-400{--tw-text-opacity:1;color:rgb(34 211 238 / var(--tw-text-opacity, 1))}.text-emerald-200{--tw-text-opacity:1;color:rgb(167 243 208 / var(--tw-text-opacity, 1))}.placeholder-gray-500::placeholder{--tw-placeholder-opacity:1;color:rgb(107 114 128 / var(--tw-placeholder-opacity, 1))}.opacity-0{opacity:0}.opacity-80{opacity:0.8}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-brand-500\/20{--tw-shadow-color:rgb(255 0 85 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.shadow-brand-500\/30{--tw-shadow-color:rgb(255 0 85 / 0.3);--tw-shadow:var(--tw-shadow-colored)}.shadow-emerald-500\/20{--tw-shadow-color:rgb(16 185 129 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.shadow-emerald-500\/30{--tw-shadow-color:rgb(16 185 129 / 0.3);--tw-shadow:var(--tw-shadow-colored)}.shadow-brand-500\/40{--tw-shadow-color:rgb(255 0 85 / 0.4);--tw-shadow:var(--tw-shadow-colored)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-lg{--tw-backdrop-blur:blur(16px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.duration-500{transition-duration:500ms}.selection\:bg-brand-500 *::selection{--tw-bg-opacity:1;background-color:rgb(255 0 85 / var(--tw-bg-opacity, 1))}.selection\:text-white *::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.selection\:bg-brand-500::selection{--tw-bg-opacity:1;background-color:rgb(255 0 85 / var(--tw-bg-opacity, 1))}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:bg-indigo-500:hover{--tw-bg-opacity:1;background-color:rgb(99 102 241 / var(--tw-bg-opacity, 1))}.hover\:bg-brand-600:hover{--tw-bg-opacity:1;background-color:rgb(225 29 72 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-700:hover{--tw-bg-opacity:1;background-color:rgb(55 65 81 / var(--tw-bg-opacity, 1))}.hover\:bg-emerald-500:hover{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.hover\:bg-rose-600:hover{--tw-bg-opacity:1;background-color:rgb(225 29 72 / var(--tw-bg-opacity, 1))}.hover\:from-brand-600:hover{--tw-gradient-from:#e11d48 var(--tw-gradient-from-position);--tw-gradient-to:rgb(225 29 72 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.hover\:from-emerald-500:hover{--tw-gradient-from:#10b981 var(--tw-gradient-from-position);--tw-gradient-to:rgb(16 185 129 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.hover\:from-amber-600:hover{--tw-gradient-from:#d97706 var(--tw-gradient-from-position);--tw-gradient-to:rgb(217 119 6 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.hover\:from-emerald-600:hover{--tw-gradient-from:#059669 var(--tw-gradient-from-position);--tw-gradient-to:rgb(5 150 105 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.hover\:to-rose-700:hover{--tw-gradient-to:#be123c var(--tw-gradient-to-position)}.hover\:to-teal-500:hover{--tw-gradient-to:#14b8a6 var(--tw-gradient-to-position)}.hover\:to-brand-600:hover{--tw-gradient-to:#e11d48 var(--tw-gradient-to-position)}.hover\:to-teal-700:hover{--tw-gradient-to:#0f766e var(--tw-gradient-to-position)}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:text-brand-500:hover{--tw-text-opacity:1;color:rgb(255 0 85 / var(--tw-text-opacity, 1))}.hover\:underline:hover{-webkit-text-decoration-line:underline;text-decoration-line:underline}.focus\:border-brand-500:focus{--tw-border-opacity:1;border-color:rgb(255 0 85 / var(--tw-border-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.active\:scale-95:active{--tw-scale-x:.95;--tw-scale-y:.95;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:scale-100{--tw-scale-x:1;--tw-scale-y:1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:scale-105{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:text-brand-500{--tw-text-opacity:1;color:rgb(255 0 85 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:opacity-100{opacity:1}@media (min-width: 640px){.sm\:w-72{width:18rem}.sm\:w-auto{width:auto}.sm\:flex-none{flex:none}.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.sm\:flex-row{flex-direction:row}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:px-8{padding-left:2rem;padding-right:2rem}.sm\:text-2xl{font-size:1.5rem;line-height:2rem}.sm\:text-sm{font-size:0.875rem;line-height:1.25rem}}@media (min-width: 768px){.md\:block{display:block}.md\:flex{display:flex}.md\:hidden{display:none}}@media (min-width: 1024px){.lg\:col-span-3{grid-column:span 3 / span 3}.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (min-width: 1280px){.xl\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}}</style></head>
+</head>
 <body class="min-h-screen flex flex-col justify-between selection:bg-brand-500 selection:text-white">
 
-    <!-- Header / Navbar -->
+    <!-- Clean Header for Visitors -->
     <header class="sticky top-0 z-40 bg-darkbg/90 backdrop-blur-md border-b border-bordercolor">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                <!-- Logo -->
                 <div class="flex items-center gap-3">
                     <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-purple-600 flex items-center justify-center font-black text-xl text-white shadow-lg shadow-brand-500/30">
                         V
@@ -668,61 +61,34 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
                         <h1 class="text-xl sm:text-2xl font-black tracking-wider text-white">
                             VIP <span class="text-brand-500">MEDIA</span> HUB
                         </h1>
-                        <p class="text-[10px] text-gray-400 -mt-1 tracking-widest font-semibold uppercase">Exclusive Photo &amp; Video Portal</p>
+                        <p class="text-[10px] text-gray-400 -mt-1 tracking-widest font-semibold uppercase">Exclusive Photo & Video Portal</p>
                     </div>
                 </div>
 
-                <!-- Live Counter Badges & Add Button -->
-                <div class="flex items-center gap-3">
-                    <div class="hidden md:flex items-center gap-2 bg-cardbg border border-bordercolor px-3 py-1.5 rounded-lg text-xs font-semibold">
-                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                        <span class="text-gray-400">Total Media:</span>
-                        <span id="totalItemsCount" class="text-brand-500 font-bold">3</span>
-                    </div>
-
-                    <button id="exportCodeBtn" class="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold px-3 py-2.5 rounded-xl text-xs shadow-lg shadow-emerald-500/20 transition-all transform active:scale-95 flex items-center gap-1.5">
-                        <i class="fa-solid fa-code"></i>
-                        <span>සම්පූර්ණ Code එක Copy කරන්න</span>
-                    </button>
-
-                    <button id="openAdminModalBtn" class="bg-gradient-to-r from-brand-500 to-rose-600 hover:from-brand-600 hover:to-rose-700 text-white font-bold px-4 py-2.5 rounded-xl text-xs sm:text-sm shadow-lg shadow-brand-500/20 transition-all transform active:scale-95 flex items-center gap-2">
-                        <i class="fa-solid fa-cloud-arrow-up text-base"></i>
-                        <span>අලුත් Content දාන්න (Bulk)</span>
-                    </button>
+                <div class="flex items-center gap-2 bg-cardbg border border-bordercolor px-3.5 py-2 rounded-xl text-xs font-semibold">
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span class="text-gray-400 hidden sm:inline">Total Media:</span>
+                    <span id="totalItemsCount" class="text-brand-500 font-bold">0</span>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Top Header Banner Ad Placement (728x90 Desktop / 320x50 Mobile) -->
+    <!-- Top Header Banner Ad -->
     <section class="w-full bg-cardbg/40 border-b border-bordercolor py-3">
         <div class="max-w-7xl mx-auto px-4 flex flex-col items-center justify-center">
             <p class="text-[10px] text-gray-500 font-semibold mb-1 uppercase tracking-widest">Sponsored Advertisement</p>
             
-            <!-- 728x90 Desktop Banner -->
             <div class="hidden md:block overflow-hidden rounded-lg min-h-[90px]">
                 <script>
-                  atOptions = {
-                    'key' : '292388e6c887c71a96888fa0cc36941f',
-                    'format' : 'iframe',
-                    'height' : 90,
-                    'width' : 728,
-                    'params' : {}
-                  };
+                  atOptions = { 'key' : '292388e6c887c71a96888fa0cc36941f', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} };
                 </script>
                 <script src="https://www.highperformanceformat.com/292388e6c887c71a96888fa0cc36941f/invoke.js"></script>
             </div>
 
-            <!-- 320x50 Mobile Banner -->
             <div class="block md:hidden overflow-hidden rounded-lg min-h-[50px]">
                 <script>
-                  atOptions = {
-                    'key' : 'b64e2f22ac2f7a3dff3a923ef183296a',
-                    'format' : 'iframe',
-                    'height' : 50,
-                    'width' : 320,
-                    'params' : {}
-                  };
+                  atOptions = { 'key' : 'b64e2f22ac2f7a3dff3a923ef183296a', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
                 </script>
                 <script src="https://www.highperformanceformat.com/b64e2f22ac2f7a3dff3a923ef183296a/invoke.js"></script>
             </div>
@@ -732,13 +98,11 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
     <!-- Main Container -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full flex-grow">
         
-        <!-- Controls: Search & Filter Tabs -->
+        <!-- Controls: Search & Filters -->
         <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-6">
-            
-            <!-- Filters -->
             <div class="flex items-center bg-cardbg p-1 border border-bordercolor rounded-xl w-full sm:w-auto">
                 <button data-filter="all" class="filter-btn active flex-1 sm:flex-none px-5 py-2 rounded-lg text-xs font-bold transition text-white bg-brand-500">
-                    සියල්ල (All)
+                    All
                 </button>
                 <button data-filter="photo" class="filter-btn flex-1 sm:flex-none px-5 py-2 rounded-lg text-xs font-bold transition text-gray-400 hover:text-white">
                     <i class="fa-regular fa-image mr-1"></i> Photos
@@ -748,228 +112,60 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
                 </button>
             </div>
 
-            <!-- Search Bar -->
             <div class="relative w-full sm:w-72">
                 <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-xs"></i>
-                <input type="text" id="searchInput" placeholder="Search albums or videos..." class="w-full bg-cardbg border border-bordercolor rounded-xl pl-9 pr-4 py-2 text-xs text-white placeholder-gray-500 focus:outline-none focus:border-brand-500 transition">
+                <input type="text" id="searchInput" placeholder="Search gallery..." class="w-full bg-cardbg border border-bordercolor rounded-xl pl-9 pr-4 py-2 text-xs text-white placeholder-gray-500 focus:outline-none focus:border-brand-500 transition">
             </div>
         </div>
 
-        <!-- In-Content 468x60 Banner Ad -->
+        <!-- In-Content Banner Ad -->
         <div class="mb-8 flex flex-col items-center justify-center">
             <script>
-              atOptions = {
-                'key' : '528c2baaa775a51f30609ead9051f321',
-                'format' : 'iframe',
-                'height' : 60,
-                'width' : 468,
-                'params' : {}
-              };
+              atOptions = { 'key' : '528c2baaa775a51f30609ead9051f321', 'format' : 'iframe', 'height' : 60, 'width' : 468, 'params' : {} };
             </script>
             <script src="https://www.highperformanceformat.com/528c2baaa775a51f30609ead9051f321/invoke.js"></script>
         </div>
 
-        <!-- Grid Layout with Sidebar -->
+        <!-- Media Grid & Sidebar -->
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
-            
-            <!-- Media Grid Area (Spans 3 Cols on LG) -->
             <div class="lg:col-span-3">
-                
-                <!-- Empty State -->
                 <div id="emptyState" class="hidden flex-col items-center justify-center py-16 bg-cardbg/50 border border-dashed border-bordercolor rounded-2xl text-center">
                     <div class="w-16 h-16 rounded-full bg-brand-500/10 flex items-center justify-center text-brand-500 text-2xl mb-3">
                         <i class="fa-regular fa-folder-open"></i>
                     </div>
-                    <h3 class="text-base font-bold text-white mb-1">තවම කිසිදු Content එකක් නැත!</h3>
-                    <p class="text-xs text-gray-400 max-w-sm mb-4">ඉහත ඇති "අලුත් Content දාන්න" බටන් එක ක්ලික් කර ImgBB Links/Embed Codes එකපාර Paste කරන්න.</p>
+                    <h3 class="text-base font-bold text-white mb-1">No media items found</h3>
                 </div>
 
-                <!-- Dynamic Media Items Grid -->
-                <div id="mediaGrid" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
-                    <div class="bg-cardbg border border-bordercolor card-glow rounded-2xl overflow-hidden flex flex-col justify-between transition-all duration-300 group">
-                        
-                        <!-- Thumbnail Container -->
-                        <div class="relative h-48 bg-darkbg overflow-hidden cursor-pointer" onclick="openLightbox('https://i.ibb.co/v43RXrNN/Real-Photo-AI-Natural-lk-2-1788958399848.jpg', 'Exclusive HD Media Collection #3', 'https://www.effectivecpmnetwork.com/ib7548bpzb?key=51c2056f2fa963cbad38e9408b8d6d8e')">
-                            <img src="https://i.ibb.co/v43RXrNN/Real-Photo-AI-Natural-lk-2-1788958399848.jpg" alt="Exclusive HD Media Collection #3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/161b26/ff0055?text=Preview+Unavailable'">
-                            
-                            <!-- Overlay Gradient -->
-                            <div class="absolute inset-0 bg-gradient-to-t from-cardbg via-transparent to-transparent opacity-80"></div>
-
-                            <!-- Badges -->
-                            <div class="absolute top-3 left-3 flex items-center gap-1.5">
-                                <span class="bg-black/60 backdrop-blur-md border border-white/10 text-white text-[10px] font-bold px-2.5 py-1 rounded-lg flex items-center gap-1">
-                                    <i class="fa-regular fa-image text-cyan-400"></i>
-                                    HD PHOTO
-                                </span>
-                            </div>
-
-                            <!-- Delete Action -->
-                            <button onclick="event.stopPropagation(); deleteItem('item-1788966016092')" title="Delete Post" class="absolute top-3 right-3 w-8 h-8 rounded-lg bg-black/60 hover:bg-rose-600 text-gray-400 hover:text-white transition flex items-center justify-center backdrop-blur-md">
-                                <i class="fa-regular fa-trash-can text-xs"></i>
-                            </button>
-
-                            <!-- Hover Play Preview Icon -->
-                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                <div class="w-12 h-12 rounded-full bg-brand-500/90 text-white flex items-center justify-center text-lg shadow-xl shadow-brand-500/40 transform scale-75 group-hover:scale-100 transition-transform">
-                                    <i class="fa-solid fa-expand"></i>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card Body -->
-                        <div class="p-4 flex flex-col justify-between flex-grow">
-                            <h3 class="text-xs font-bold text-white line-clamp-2 mb-3 group-hover:text-brand-500 transition-colors" title="Exclusive HD Media Collection #3">
-                                Exclusive HD Media Collection #3
-                            </h3>
-
-                            <!-- CTA Download Button -->
-                            <a href="https://www.effectivecpmnetwork.com/ib7548bpzb?key=51c2056f2fa963cbad38e9408b8d6d8e" target="_blank" rel="noopener" class="w-full bg-gradient-to-r from-brand-500 to-rose-600 hover:from-brand-600 hover:to-rose-700 text-white font-extrabold py-2.5 px-3 rounded-xl text-xs transition flex items-center justify-center gap-2 shadow-lg shadow-brand-500/20 text-center">
-                                <i class="fa-solid fa-circle-play"></i>
-                                <span>WATCH FULL HD / DOWNLOAD</span>
-                            </a>
-                        </div>
-
-                    </div>
-                
-                    <div class="bg-cardbg border border-bordercolor card-glow rounded-2xl overflow-hidden flex flex-col justify-between transition-all duration-300 group">
-                        
-                        <!-- Thumbnail Container -->
-                        <div class="relative h-48 bg-darkbg overflow-hidden cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&amp;w=600&amp;auto=format&amp;fit=crop', 'Exclusive High Definition Album Collection #1', 'https://www.effectivecpmnetwork.com/ib7548bpzb?key=51c2056f2fa963cbad38e9408b8d6d8e')">
-                            <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&amp;w=600&amp;auto=format&amp;fit=crop" alt="Exclusive High Definition Album Collection #1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/161b26/ff0055?text=Preview+Unavailable'">
-                            
-                            <!-- Overlay Gradient -->
-                            <div class="absolute inset-0 bg-gradient-to-t from-cardbg via-transparent to-transparent opacity-80"></div>
-
-                            <!-- Badges -->
-                            <div class="absolute top-3 left-3 flex items-center gap-1.5">
-                                <span class="bg-black/60 backdrop-blur-md border border-white/10 text-white text-[10px] font-bold px-2.5 py-1 rounded-lg flex items-center gap-1">
-                                    <i class="fa-regular fa-image text-cyan-400"></i>
-                                    HD PHOTO
-                                </span>
-                            </div>
-
-                            <!-- Delete Action -->
-                            <button onclick="event.stopPropagation(); deleteItem('item-sample-1')" title="Delete Post" class="absolute top-3 right-3 w-8 h-8 rounded-lg bg-black/60 hover:bg-rose-600 text-gray-400 hover:text-white transition flex items-center justify-center backdrop-blur-md">
-                                <i class="fa-regular fa-trash-can text-xs"></i>
-                            </button>
-
-                            <!-- Hover Play Preview Icon -->
-                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                <div class="w-12 h-12 rounded-full bg-brand-500/90 text-white flex items-center justify-center text-lg shadow-xl shadow-brand-500/40 transform scale-75 group-hover:scale-100 transition-transform">
-                                    <i class="fa-solid fa-expand"></i>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card Body -->
-                        <div class="p-4 flex flex-col justify-between flex-grow">
-                            <h3 class="text-xs font-bold text-white line-clamp-2 mb-3 group-hover:text-brand-500 transition-colors" title="Exclusive High Definition Album Collection #1">
-                                Exclusive High Definition Album Collection #1
-                            </h3>
-
-                            <!-- CTA Download Button -->
-                            <a href="https://www.effectivecpmnetwork.com/ib7548bpzb?key=51c2056f2fa963cbad38e9408b8d6d8e" target="_blank" rel="noopener" class="w-full bg-gradient-to-r from-brand-500 to-rose-600 hover:from-brand-600 hover:to-rose-700 text-white font-extrabold py-2.5 px-3 rounded-xl text-xs transition flex items-center justify-center gap-2 shadow-lg shadow-brand-500/20 text-center">
-                                <i class="fa-solid fa-circle-play"></i>
-                                <span>WATCH FULL HD / DOWNLOAD</span>
-                            </a>
-                        </div>
-
-                    </div>
-                
-                    <div class="bg-cardbg border border-bordercolor card-glow rounded-2xl overflow-hidden flex flex-col justify-between transition-all duration-300 group">
-                        
-                        <!-- Thumbnail Container -->
-                        <div class="relative h-48 bg-darkbg overflow-hidden cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&amp;w=600&amp;auto=format&amp;fit=crop', 'Premium Ultra HD Video Stream #2', 'https://www.effectivecpmnetwork.com/ib7548bpzb?key=51c2056f2fa963cbad38e9408b8d6d8e')">
-                            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&amp;w=600&amp;auto=format&amp;fit=crop" alt="Premium Ultra HD Video Stream #2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/161b26/ff0055?text=Preview+Unavailable'">
-                            
-                            <!-- Overlay Gradient -->
-                            <div class="absolute inset-0 bg-gradient-to-t from-cardbg via-transparent to-transparent opacity-80"></div>
-
-                            <!-- Badges -->
-                            <div class="absolute top-3 left-3 flex items-center gap-1.5">
-                                <span class="bg-black/60 backdrop-blur-md border border-white/10 text-white text-[10px] font-bold px-2.5 py-1 rounded-lg flex items-center gap-1">
-                                    <i class="fa-solid fa-video text-brand-500"></i>
-                                    4K VIDEO
-                                </span>
-                            </div>
-
-                            <!-- Delete Action -->
-                            <button onclick="event.stopPropagation(); deleteItem('item-sample-2')" title="Delete Post" class="absolute top-3 right-3 w-8 h-8 rounded-lg bg-black/60 hover:bg-rose-600 text-gray-400 hover:text-white transition flex items-center justify-center backdrop-blur-md">
-                                <i class="fa-regular fa-trash-can text-xs"></i>
-                            </button>
-
-                            <!-- Hover Play Preview Icon -->
-                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                <div class="w-12 h-12 rounded-full bg-brand-500/90 text-white flex items-center justify-center text-lg shadow-xl shadow-brand-500/40 transform scale-75 group-hover:scale-100 transition-transform">
-                                    <i class="fa-solid fa-expand"></i>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card Body -->
-                        <div class="p-4 flex flex-col justify-between flex-grow">
-                            <h3 class="text-xs font-bold text-white line-clamp-2 mb-3 group-hover:text-brand-500 transition-colors" title="Premium Ultra HD Video Stream #2">
-                                Premium Ultra HD Video Stream #2
-                            </h3>
-
-                            <!-- CTA Download Button -->
-                            <a href="https://www.effectivecpmnetwork.com/ib7548bpzb?key=51c2056f2fa963cbad38e9408b8d6d8e" target="_blank" rel="noopener" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold py-2.5 px-3 rounded-xl text-xs transition flex items-center justify-center gap-2 shadow-lg shadow-brand-500/20 text-center">
-                                <i class="fa-solid fa-circle-down"></i>
-                                <span>මෙම වීඩියෝව Download කරන්න</span>
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
+                <div id="mediaGrid" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5"></div>
             </div>
 
-            <!-- Sidebar Ads Area (1 Col on LG) -->
             <aside class="space-y-6">
-                
-                <!-- Sidebar Sticky Ad Box -->
                 <div class="sticky top-24 bg-cardbg border border-bordercolor rounded-2xl p-4 flex flex-col items-center text-center">
-                    <p class="text-[10px] text-gray-500 font-bold uppercase tracking-wider mb-3">Sponsored Video Ad</p>
-                    
-                    <!-- 160x300 Skyscraper Ad -->
+                    <p class="text-[10px] text-gray-500 font-bold uppercase tracking-wider mb-3">Sponsored Video Stream</p>
                     <div class="overflow-hidden rounded-lg min-h-[300px] flex items-center justify-center bg-darkbg/50 w-full">
                         <script>
-                          atOptions = {
-                            'key' : '0b4be129316ba77bf6cc2db3b82a0bf8',
-                            'format' : 'iframe',
-                            'height' : 300,
-                            'width' : 160,
-                            'params' : {}
-                          };
+                          atOptions = { 'key' : '0b4be129316ba77bf6cc2db3b82a0bf8', 'format' : 'iframe', 'height' : 300, 'width' : 160, 'params' : {} };
                         </script>
                         <script src="https://www.highperformanceformat.com/0b4be129316ba77bf6cc2db3b82a0bf8/invoke.js"></script>
                     </div>
 
-                    <!-- Direct Ad Banner CTA -->
                     <a href="https://www.effectivecpmnetwork.com/ib7548bpzb?key=51c2056f2fa963cbad38e9408b8d6d8e" target="_blank" rel="noopener" class="mt-4 w-full bg-gradient-to-r from-amber-500 to-brand-500 hover:from-amber-600 hover:to-brand-600 text-white text-xs font-extrabold py-3 rounded-xl shadow-lg transition flex items-center justify-center gap-2 animate-bounce">
                         <i class="fa-solid fa-bolt"></i> HIGH SPEED DIRECT DOWNLOAD
                     </a>
-
-                    <div class="mt-4 pt-4 border-t border-bordercolor w-full">
-                        <p class="text-[10px] text-gray-400 font-bold uppercase tracking-wider mb-2">🔥 Premium Direct Access</p>
-                        <a href="https://www.effectivecpmnetwork.com/ib7548bpzb?key=51c2056f2fa963cbad38e9408b8d6d8e" target="_blank" rel="noopener" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold py-2.5 rounded-lg flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-fire text-amber-400"></i> Full Unlocked Media Drive
-                        </a>
-                    </div>
                 </div>
-
             </aside>
         </div>
 
     </main>
 
-    <!-- Sticky Bottom Ad Bar for maximum revenue -->
-    <div id="floatingAdBar" class="fixed bottom-0 left-0 right-0 z-40 bg-cardbg/95 backdrop-blur-md border-t border-brand-500/40 p-2.5 shadow-2xl flex items-center justify-between px-4 sm:px-8">
+    <!-- Floating Bottom Ad -->
+    <div class="fixed bottom-0 left-0 right-0 z-40 bg-cardbg/95 backdrop-blur-md border-t border-brand-500/40 p-2.5 shadow-2xl flex items-center justify-between px-4 sm:px-8">
         <div class="flex items-center gap-3">
             <div class="w-8 h-8 rounded-full bg-brand-500 flex items-center justify-center text-white text-xs animate-spin">
                 <i class="fa-solid fa-compact-disc"></i>
             </div>
             <div>
-                <p class="text-xs font-bold text-white">VIP Direct High Speed Stream &amp; Download</p>
+                <p class="text-xs font-bold text-white">VIP Direct High Speed Stream & Download</p>
                 <p class="text-[10px] text-gray-400">No Limit, Instant Speed Streaming Server</p>
             </div>
         </div>
@@ -984,120 +180,7 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
         <div id="container-2d08a49360bea68cb6fef1b2954d6af5"></div>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-cardbg border-t border-bordercolor py-8">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <div class="flex justify-center items-center gap-2 mb-3">
-                <div class="w-6 h-6 rounded-md bg-brand-500 flex items-center justify-center text-white font-black text-xs">V</div>
-                <span class="text-sm font-bold text-white tracking-wider">VIP MEDIA GALLERY</span>
-            </div>
-            <p class="text-xs text-gray-500 mb-2">© 2026 VIP Media Gallery. All High Speed Streaming Rights Reserved.</p>
-            <p class="text-[11px] text-gray-600">This portal contains user aggregated links and direct cloud downloads.</p>
-        </div>
-    </footer>
-
-    <!-- Admin Content Bulk Add Modal -->
-    <div id="adminModal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden">
-        <div class="bg-cardbg border border-bordercolor w-full max-w-lg rounded-2xl p-6 shadow-2xl relative transform transition-all">
-            
-            <button id="closeAdminModalBtn" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-
-            <div class="flex items-center gap-3 mb-4">
-                <div class="w-10 h-10 rounded-xl bg-brand-500/20 text-brand-500 flex items-center justify-center font-bold text-lg">
-                    <i class="fa-solid fa-layer-group"></i>
-                </div>
-                <div>
-                    <h2 class="text-lg font-bold text-white">අලුත් Content එකක් දාන්න (Bulk Add)</h2>
-                    <p class="text-xs text-gray-400">ImgBB එකෙන් Copy කරගත් Embed Codes ගොඩක් එකපාර Paste කරන්න.</p>
-                </div>
-            </div>
-
-            <form id="addContentForm" class="space-y-4">
-                
-                <div>
-                    <label class="block text-xs font-semibold text-gray-300 uppercase mb-1">
-                        ImgBB Preview Codes / Image Links <span class="text-brand-500">* (එකපාර ගොඩක් දැමිය හැක)</span>
-                    </label>
-                    <textarea id="imgbbInput" rows="6" required="" placeholder="ImgBB එකෙන් Copy කරගත් HTML, BBCode හෝ Links සිය ගණනක් වුවද මෙතැන Paste කරන්න...
-
-උදාහරණ:
-&lt;a href=&quot;...&quot;&gt;&lt;img src=&quot;https://i.ibb.co/pic1.jpg&quot; /&gt;&lt;/a&gt;
-&lt;a href=&quot;...&quot;&gt;&lt;img src=&quot;https://i.ibb.co/pic2.jpg&quot; /&gt;&lt;/a&gt;
-https://i.ibb.co/pic3.jpg" class="w-full bg-darkbg border border-bordercolor rounded-xl p-3 text-xs text-white focus:outline-none focus:border-brand-500 font-mono"></textarea>
-                    
-                    <div id="parsedCountBadge" class="mt-1 text-[11px] text-emerald-400 font-bold flex items-center gap-1 hidden">
-                        <i class="fa-solid fa-check-circle"></i>
-                        <span id="parsedCountText">Image 1 ක් හඳුනාගන්නා ලදී (Auto Bulk Ready)</span>
-                    </div>
-                </div>
-
-                <div>
-                    <label class="block text-xs font-semibold text-gray-300 uppercase mb-1">
-                        මාතෘකාව / Post Title <span class="text-gray-500 font-normal">(Optional)</span>
-                    </label>
-                    <input type="text" id="postTitle" placeholder="හිස්ව තිබ්බොත් Auto Title හැදේ (උදා: Exclusive Album #1)" class="w-full bg-darkbg border border-bordercolor rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-brand-500">
-                </div>
-
-                <div>
-                    <label class="block text-xs font-semibold text-gray-300 uppercase mb-1">
-                        වීඩියෝ Download Link එක <span class="text-gray-500 font-normal">(Optional)</span>
-                    </label>
-                    <input type="url" id="videoLinkInput" placeholder="https://your-server.com/video.mp4" class="w-full bg-darkbg border border-bordercolor rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-brand-500">
-                    <p class="text-[11px] text-gray-400 mt-1 flex items-center gap-1">
-                        <i class="fa-solid fa-circle-info text-brand-500"></i>
-                        ලින්ක් එකක් නොදැමුවහොත් Automatic High Converting Direct Download Ad Button එක යෙදේ.
-                    </p>
-                </div>
-
-                <div class="pt-2 flex gap-3">
-                    <button type="button" id="cancelModalBtn" class="w-1/2 bg-gray-800 hover:bg-gray-700 text-gray-300 font-semibold py-2.5 rounded-xl text-xs transition">අවලංගු කරන්න</button>
-                    <button type="submit" class="w-1/2 bg-brand-500 hover:bg-brand-600 text-white font-bold py-2.5 rounded-xl text-xs transition flex items-center justify-center gap-2 shadow-lg shadow-brand-500/30">
-                        <i class="fa-solid fa-plus"></i> එකතු කරන්න
-                    </button>
-                </div>
-            </form>
-
-        </div>
-    </div>
-
-    <!-- Export Full Website Code Modal -->
-    <div id="exportModal" class="fixed inset-0 bg-black/85 backdrop-blur-md z-50 flex items-center justify-center hidden p-4">
-        <div class="bg-cardbg border border-bordercolor w-full max-w-2xl rounded-2xl p-6 shadow-2xl relative transform transition-all">
-            <button id="closeExportModalBtn" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-
-            <div class="flex items-center gap-3 mb-4">
-                <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-lg">
-                    <i class="fa-solid fa-file-code"></i>
-                </div>
-                <div>
-                    <h2 class="text-lg font-bold text-white">සම්පූර්ණ Website Code එක (With Ads &amp; All Items)</h2>
-                    <p class="text-xs text-gray-400">ඔබ දැනට එකතු කර ඇති සියලුම Photos/Videos සහ Ads ඇතුලත් මුලු Code එක මෙතැනින් Copy කරගන්න.</p>
-                </div>
-            </div>
-
-            <div class="space-y-4">
-                <div class="relative">
-                    <textarea id="exportedCodeTextArea" readonly="" rows="12" class="w-full bg-darkbg border border-bordercolor rounded-xl p-3 text-[11px] text-emerald-300 font-mono focus:outline-none select-all"></textarea>
-                </div>
-
-                <div class="flex flex-col sm:flex-row gap-3">
-                    <button id="copyFullCodeBtn" class="flex-1 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-extrabold py-3 rounded-xl text-xs transition flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/30">
-                        <i class="fa-solid fa-copy text-base"></i>
-                        <span>CODE එක COPY කරගන්න (1-Click Copy)</span>
-                    </button>
-                    <button id="downloadHtmlFileBtn" class="bg-gray-800 hover:bg-gray-700 text-gray-200 font-bold px-5 py-3 rounded-xl text-xs transition flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-download"></i> index.html ලෙස Download කරන්න
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Image / Video Preview Lightbox Modal -->
+    <!-- Lightbox Modal -->
     <div id="lightboxModal" class="fixed inset-0 bg-black/90 backdrop-blur-lg z-50 flex items-center justify-center hidden p-4">
         <div class="relative max-w-4xl w-full flex flex-col items-center">
             <button id="closeLightboxBtn" class="absolute -top-12 right-0 text-white hover:text-brand-500 text-2xl font-bold bg-gray-900/80 w-10 h-10 rounded-full flex items-center justify-center border border-gray-700">
@@ -1106,48 +189,32 @@ https://i.ibb.co/pic3.jpg" class="w-full bg-darkbg border border-bordercolor rou
             <div class="w-full overflow-hidden rounded-2xl border border-bordercolor bg-cardbg p-2 max-h-[75vh] flex items-center justify-center">
                 <img id="lightboxImg" src="" alt="Preview" class="max-h-[70vh] w-auto object-contain rounded-xl">
             </div>
-            
-            <div class="w-full mt-3 bg-darkbg/70 p-2 rounded-xl border border-bordercolor text-center">
-                <p class="text-[9px] text-gray-500 uppercase tracking-widest font-bold mb-1">Sponsored Direct Stream Link</p>
-                <a href="https://www.effectivecpmnetwork.com/ib7548bpzb?key=51c2056f2fa963cbad38e9408b8d6d8e" target="_blank" rel="noopener" class="text-xs text-amber-400 font-bold hover:underline flex items-center justify-center gap-1">
-                    <i class="fa-solid fa-bolt"></i> Click Here To Stream Full High Quality HD Video Immediately
-                </a>
-            </div>
-
             <div class="w-full mt-3 flex flex-col sm:flex-row items-center justify-between bg-cardbg p-4 rounded-xl border border-bordercolor gap-3">
                 <h4 id="lightboxTitle" class="text-sm font-bold text-white truncate max-w-md">Title</h4>
-                <a id="lightboxCtaBtn" href="#" target="_blank" rel="noopener" class="w-full sm:w-auto bg-gradient-to-r from-brand-500 to-rose-600 hover:from-brand-600 hover:to-rose-700 text-white font-bold px-6 py-2.5 rounded-xl text-xs transition text-center shadow-lg shadow-brand-500/30 flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-download"></i> Download Full Content HD
+                <a id="lightboxCtaBtn" href="#" target="_blank" rel="noopener" class="w-full sm:w-auto bg-gradient-to-r from-brand-500 to-rose-600 text-white font-bold px-6 py-2.5 rounded-xl text-xs transition text-center flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-download"></i> Download Full HD
                 </a>
             </div>
         </div>
     </div>
 
-    <!-- Toast Notification Container -->
-    <div id="toastContainer" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2"><div class="flex items-center gap-3 px-4 py-3 rounded-xl shadow-2xl border text-xs font-bold transition-all transform bg-emerald-950 border-emerald-600 text-emerald-200">
-                <i class="fa-solid fa-circle-check text-emerald-400 text-base"></i>
-                <span>Image 1 ක් සාර්ථකව එකතු කළා!</span>
-            </div></div>
+    <!-- Footer -->
+    <footer class="bg-cardbg border-t border-bordercolor py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-xs text-gray-500">&copy; 2026 VIP Media Gallery. All Rights Reserved.</p>
+        </div>
+    </footer>
 
     <script>
-        // Default Direct Ad URL provided by user
         const DIRECT_AD_URL = "https://www.effectivecpmnetwork.com/ib7548bpzb?key=51c2056f2fa963cbad38e9408b8d6d8e";
-        const LOCAL_STORAGE_KEY = "VIP_MEDIA_HUB_GALLERY_DATA_V1";
-
-        // Global State
-        let mediaItems = [];
-        let activeFilter = 'all';
-        let searchQuery = '';
-
-        // Initial Sample Items if LocalStorage is empty
-        const INITIAL_SAMPLES = [
+        const mediaItems = [
           {
-                    "id": "item-1788966016092",
+                    "id": "item-1788966793880",
                     "title": "Exclusive HD Media Collection #3",
-                    "imageUrl": "https://i.ibb.co/v43RXrNN/Real-Photo-AI-Natural-lk-2-1788958399848.jpg",
+                    "imageUrl": "https://i.ibb.co/DfDKnnB7/Real-Photo-AI-Natural-lk-6-1788958401390.jpg",
                     "videoUrl": "",
                     "type": "photo",
-                    "createdAt": 1788966016092
+                    "createdAt": 1788966793880
           },
           {
                     "id": "item-sample-1",
@@ -1155,7 +222,7 @@ https://i.ibb.co/pic3.jpg" class="w-full bg-darkbg border border-bordercolor rou
                     "imageUrl": "https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=600&auto=format&fit=crop",
                     "videoUrl": "",
                     "type": "photo",
-                    "createdAt": 1788965704054
+                    "createdAt": 1788966479574
           },
           {
                     "id": "item-sample-2",
@@ -1163,121 +230,18 @@ https://i.ibb.co/pic3.jpg" class="w-full bg-darkbg border border-bordercolor rou
                     "imageUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=600&auto=format&fit=crop",
                     "videoUrl": "https://www.effectivecpmnetwork.com/ib7548bpzb?key=51c2056f2fa963cbad38e9408b8d6d8e",
                     "type": "video",
-                    "createdAt": 1788965404054
+                    "createdAt": 1788966179574
           }
 ];
 
-        function loadItemsFromStorage() {
-            try {
-                const data = localStorage.getItem(LOCAL_STORAGE_KEY);
-                if (data) {
-                    mediaItems = JSON.parse(data);
-                } else {
-                    mediaItems = [...INITIAL_SAMPLES];
-                    saveItemsToStorage();
-                }
-            } catch (e) {
-                console.error("Storage load error:", e);
-                mediaItems = [...INITIAL_SAMPLES];
-            }
-        }
-
-        function saveItemsToStorage() {
-            try {
-                localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(mediaItems));
-            } catch (e) {
-                console.error("Storage save error:", e);
-            }
-        }
-
-        // Generates complete runnable single-file HTML code with current mediaItems baked inside INITIAL_SAMPLES!
-        function generateCompleteWebsiteCode() {
-            let currentDoc = document.documentElement.outerHTML;
-            
-            // Replace INITIAL_SAMPLES array with current mediaItems serialized JSON
-            const jsonItems = JSON.stringify(mediaItems, null, 12);
-            const replacementString = `const INITIAL_SAMPLES = ${jsonItems};`;
-            
-            // Replace using Regex target
-            const updatedCode = "<!DOCTYPE html>\n" + currentDoc.replace(/const INITIAL_SAMPLES = \[\s*[\s\S]*?\n\s*\];/m, replacementString);
-            return updatedCode;
-        }
-
-        function parseImgBBInput(rawText) {
-            if (!rawText) return [];
-            const urls = new Set();
-            const str = rawText.trim();
-
-            // 1. Extract from <img src="..."> tags
-            const htmlMatches = str.matchAll(/src=["']([^"']+)["']/gi);
-            for (const match of htmlMatches) {
-                if (match[1] && match[1].startsWith('http')) {
-                    urls.add(match[1]);
-                }
-            }
-
-            // 2. Extract from BBCode [img]...[/img]
-            const bbMatches = str.matchAll(/\[img\]\s*(.*?)\s*\[\/img\]/gi);
-            for (const match of bbMatches) {
-                if (match[1] && match[1].startsWith('http')) {
-                    urls.add(match[1]);
-                }
-            }
-
-            // 3. Extract direct HTTP/HTTPS URLs (including ibb.co or general direct images)
-            const lines = str.split(/\r?\n/);
-            for (let line of lines) {
-                line = line.trim();
-                const urlMatches = line.match(/https?:\/\/[^\s<>"'\[\]]+/gi);
-                if (urlMatches) {
-                    urlMatches.forEach(u => {
-                        if (u.match(/\.(jpeg|jpg|gif|png|webp)/i) || u.includes('i.ibb.co')) {
-                            urls.add(u);
-                        } else if (!u.includes('<') && !u.includes('[')) {
-                            urls.add(u);
-                        }
-                    });
-                }
-            }
-
-            return Array.from(urls);
-        }
-
-        function showToast(message, type = 'success') {
-            const container = document.getElementById('toastContainer');
-            const toast = document.createElement('div');
-            
-            const isSuccess = type === 'success';
-            toast.className = `flex items-center gap-3 px-4 py-3 rounded-xl shadow-2xl border text-xs font-bold transition-all transform translate-y-5 opacity-0 ${
-                isSuccess ? 'bg-emerald-950 border-emerald-600 text-emerald-200' : 'bg-rose-950 border-rose-600 text-rose-200'
-            }`;
-            
-            toast.innerHTML = `
-                <i class="fa-solid ${isSuccess ? 'fa-circle-check text-emerald-400' : 'fa-circle-exclamation text-rose-400'} text-base"></i>
-                <span>${message}</span>
-            `;
-
-            container.appendChild(toast);
-
-            setTimeout(() => {
-                toast.classList.remove('translate-y-5', 'opacity-0');
-            }, 10);
-
-            setTimeout(() => {
-                toast.classList.add('opacity-0', 'translate-y-5');
-                setTimeout(() => toast.remove(), 300);
-            }, 3500);
-        }
+        let activeFilter = 'all';
+        let searchQuery = '';
 
         function renderGallery() {
             const grid = document.getElementById('mediaGrid');
             const emptyState = document.getElementById('emptyState');
-            const totalItemsCount = document.getElementById('totalItemsCount');
+            document.getElementById('totalItemsCount').textContent = mediaItems.length;
 
-            // Update Total Counter Badge
-            totalItemsCount.textContent = mediaItems.length;
-
-            // Filter logic
             let filtered = mediaItems.filter(item => {
                 const matchesFilter = activeFilter === 'all' || item.type === activeFilter;
                 const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase());
@@ -1295,75 +259,43 @@ https://i.ibb.co/pic3.jpg" class="w-full bg-darkbg border border-bordercolor rou
             }
 
             let html = '';
-
             filtered.forEach((item, index) => {
-                // Inline Ad Card Insertion (Insert an Inline Ad every 5 items for maximum viewability)
                 if (index > 0 && index % 5 === 0) {
                     html += `
                         <div class="bg-cardbg border border-brand-500/40 rounded-2xl p-4 flex flex-col items-center justify-center text-center col-span-1 sm:col-span-2 xl:col-span-1 relative overflow-hidden bg-gradient-to-b from-cardbg to-brand-900/20 shadow-xl">
                             <span class="absolute top-2 right-2 text-[9px] font-black uppercase tracking-widest bg-brand-500/30 text-brand-400 px-2 py-0.5 rounded">SPONSORED</span>
                             <i class="fa-solid fa-circle-play text-4xl text-brand-500 mb-2 animate-bounce"></i>
                             <h4 class="text-xs font-black text-white mb-1">Exclusive Direct HD Stream</h4>
-                            <p class="text-[11px] text-gray-400 mb-3">Watch high quality full HD videos instantly without limits.</p>
-                            <a href="${DIRECT_AD_URL}" target="_blank" rel="noopener" class="w-full bg-gradient-to-r from-amber-500 to-brand-500 hover:from-amber-600 hover:to-brand-600 text-white font-extrabold text-xs py-2.5 rounded-xl shadow-lg shadow-brand-500/30 transition flex items-center justify-center gap-2">
+                            <a href="${DIRECT_AD_URL}" target="_blank" rel="noopener" class="w-full bg-gradient-to-r from-amber-500 to-brand-500 text-white font-extrabold text-xs py-2.5 rounded-xl shadow-lg transition flex items-center justify-center gap-2">
                                 <i class="fa-solid fa-bolt"></i> WATCH FULL HD NOW
                             </a>
                         </div>
                     `;
                 }
 
-                // Determine Download Link
                 const targetDownloadUrl = item.videoUrl && item.videoUrl.trim() !== '' ? item.videoUrl : DIRECT_AD_URL;
                 const isCustomLink = item.videoUrl && item.videoUrl.trim() !== '';
 
                 html += `
                     <div class="bg-cardbg border border-bordercolor card-glow rounded-2xl overflow-hidden flex flex-col justify-between transition-all duration-300 group">
-                        
-                        <!-- Thumbnail Container -->
                         <div class="relative h-48 bg-darkbg overflow-hidden cursor-pointer" onclick="openLightbox('${item.imageUrl}', '${item.title.replace(/'/g, "\\'")}', '${targetDownloadUrl}')">
-                            <img src="${item.imageUrl}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/161b26/ff0055?text=Preview+Unavailable'">
-                            
-                            <!-- Overlay Gradient -->
+                            <img src="${item.imageUrl}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-cardbg via-transparent to-transparent opacity-80"></div>
-
-                            <!-- Badges -->
                             <div class="absolute top-3 left-3 flex items-center gap-1.5">
-                                <span class="bg-black/60 backdrop-blur-md border border-white/10 text-white text-[10px] font-bold px-2.5 py-1 rounded-lg flex items-center gap-1">
+                                <span class="bg-black/60 backdrop-blur-md border border-white/10 text-white text-[10px] font-bold px-2.5 py-1 rounded-lg">
                                     <i class="${item.type === 'video' ? 'fa-solid fa-video text-brand-500' : 'fa-regular fa-image text-cyan-400'}"></i>
                                     ${item.type === 'video' ? '4K VIDEO' : 'HD PHOTO'}
                                 </span>
                             </div>
-
-                            <!-- Delete Action -->
-                            <button onclick="event.stopPropagation(); deleteItem('${item.id}')" title="Delete Post" class="absolute top-3 right-3 w-8 h-8 rounded-lg bg-black/60 hover:bg-rose-600 text-gray-400 hover:text-white transition flex items-center justify-center backdrop-blur-md">
-                                <i class="fa-regular fa-trash-can text-xs"></i>
-                            </button>
-
-                            <!-- Hover Play Preview Icon -->
-                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                <div class="w-12 h-12 rounded-full bg-brand-500/90 text-white flex items-center justify-center text-lg shadow-xl shadow-brand-500/40 transform scale-75 group-hover:scale-100 transition-transform">
-                                    <i class="fa-solid fa-expand"></i>
-                                </div>
-                            </div>
                         </div>
 
-                        <!-- Card Body -->
                         <div class="p-4 flex flex-col justify-between flex-grow">
-                            <h3 class="text-xs font-bold text-white line-clamp-2 mb-3 group-hover:text-brand-500 transition-colors" title="${item.title}">
-                                ${item.title}
-                            </h3>
-
-                            <!-- CTA Download Button -->
-                            <a href="${targetDownloadUrl}" target="_blank" rel="noopener" class="w-full ${
-                                isCustomLink 
-                                    ? 'bg-emerald-600 hover:bg-emerald-500 text-white' 
-                                    : 'bg-gradient-to-r from-brand-500 to-rose-600 hover:from-brand-600 hover:to-rose-700 text-white'
-                            } font-extrabold py-2.5 px-3 rounded-xl text-xs transition flex items-center justify-center gap-2 shadow-lg shadow-brand-500/20 text-center">
+                            <h3 class="text-xs font-bold text-white line-clamp-2 mb-3">${item.title}</h3>
+                            <a href="${targetDownloadUrl}" target="_blank" rel="noopener" class="w-full ${isCustomLink ? 'bg-emerald-600 hover:bg-emerald-500' : 'bg-gradient-to-r from-brand-500 to-rose-600'} text-white font-extrabold py-2.5 px-3 rounded-xl text-xs transition flex items-center justify-center gap-2 text-center">
                                 <i class="fa-solid ${isCustomLink ? 'fa-circle-down' : 'fa-circle-play'}"></i>
                                 <span>${isCustomLink ? 'මෙම වීඩියෝව Download කරන්න' : 'WATCH FULL HD / DOWNLOAD'}</span>
                             </a>
                         </div>
-
                     </div>
                 `;
             });
@@ -1371,165 +303,36 @@ https://i.ibb.co/pic3.jpg" class="w-full bg-darkbg border border-bordercolor rou
             grid.innerHTML = html;
         }
 
-        function deleteItem(id) {
-            if (confirm("ඔබට මෙම පෝස්ට් එක ඉවත් කිරීමට අවශ්‍යද?")) {
-                mediaItems = mediaItems.filter(item => item.id !== id);
-                saveItemsToStorage();
-                renderGallery();
-                showToast("පෝස්ට් එක සාර්ථකව ඉවත් කළා!", "error");
-            }
-        }
-
         function openLightbox(imgUrl, title, downloadUrl) {
-            const modal = document.getElementById('lightboxModal');
             document.getElementById('lightboxImg').src = imgUrl;
             document.getElementById('lightboxTitle').textContent = title;
             document.getElementById('lightboxCtaBtn').href = downloadUrl;
-            modal.classList.remove('hidden');
+            document.getElementById('lightboxModal').classList.remove('hidden');
         }
 
         window.addEventListener('DOMContentLoaded', () => {
-            loadItemsFromStorage();
             renderGallery();
-
-            // Export Code Controls
-            const exportCodeBtn = document.getElementById('exportCodeBtn');
-            const exportModal = document.getElementById('exportModal');
-            const closeExportModalBtn = document.getElementById('closeExportModalBtn');
-            const exportedCodeTextArea = document.getElementById('exportedCodeTextArea');
-            const copyFullCodeBtn = document.getElementById('copyFullCodeBtn');
-            const downloadHtmlFileBtn = document.getElementById('downloadHtmlFileBtn');
-
-            const openExportModal = () => {
-                const fullCode = generateCompleteWebsiteCode();
-                exportedCodeTextArea.value = fullCode;
-                exportModal.classList.remove('hidden');
-            };
-
-            const closeExportModal = () => exportModal.classList.add('hidden');
-
-            exportCodeBtn.addEventListener('click', openExportModal);
-            closeExportModalBtn.addEventListener('click', closeExportModal);
-
-            copyFullCodeBtn.addEventListener('click', () => {
-                exportedCodeTextArea.select();
-                document.execCommand('copy');
-                showToast("සම්පූර්ණ Website Code එක Clipboard එකට Copy විය! (Ready to Host)");
+            document.getElementById('closeLightboxBtn').addEventListener('click', () => {
+                document.getElementById('lightboxModal').classList.add('hidden');
             });
 
-            downloadHtmlFileBtn.addEventListener('click', () => {
-                const fullCode = generateCompleteWebsiteCode();
-                const blob = new Blob([fullCode], { type: 'text/html' });
-                const url = URL.createObjectURL(blob);
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = 'index.html';
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-                URL.revokeObjectURL(url);
-                showToast("index.html ෆයිල් එක Download විය!");
-            });
-
-            // Admin Modal Controls
-            const adminModal = document.getElementById('adminModal');
-            const openAdminBtn = document.getElementById('openAdminModalBtn');
-            const closeAdminBtn = document.getElementById('closeAdminModalBtn');
-            const cancelModalBtn = document.getElementById('cancelModalBtn');
-            const imgbbInput = document.getElementById('imgbbInput');
-            const parsedCountBadge = document.getElementById('parsedCountBadge');
-            const parsedCountText = document.getElementById('parsedCountText');
-
-            const openModal = () => adminModal.classList.remove('hidden');
-            const closeModal = () => {
-                adminModal.classList.add('hidden');
-                document.getElementById('addContentForm').reset();
-                parsedCountBadge.classList.add('hidden');
-            };
-
-            openAdminBtn.addEventListener('click', openModal);
-            closeAdminBtn.addEventListener('click', closeModal);
-            cancelModalBtn.addEventListener('click', closeModal);
-
-            // Lightbox Modal Controls
-            const lightboxModal = document.getElementById('lightboxModal');
-            document.getElementById('closeLightboxBtn').addEventListener('click', () => lightboxModal.classList.add('hidden'));
-
-            // Realtime parser count detector on input
-            imgbbInput.addEventListener('input', () => {
-                const urls = parseImgBBInput(imgbbInput.value);
-                if (urls.length > 0) {
-                    parsedCountBadge.classList.remove('hidden');
-                    parsedCountText.textContent = `Image ${urls.length} ක් හඳුනාගන්නා ලදී (Auto Bulk Ready)`;
-                } else {
-                    parsedCountBadge.classList.add('hidden');
-                }
-            });
-
-            // Filter Tabs
             document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.addEventListener('click', (e) => {
+                btn.addEventListener('click', () => {
                     document.querySelectorAll('.filter-btn').forEach(b => {
                         b.classList.remove('active', 'bg-brand-500', 'text-white');
                         b.classList.add('text-gray-400');
                     });
                     btn.classList.add('active', 'bg-brand-500', 'text-white');
-                    btn.classList.remove('text-gray-400');
-
                     activeFilter = btn.dataset.filter;
                     renderGallery();
                 });
             });
 
-            // Search Filter
             document.getElementById('searchInput').addEventListener('input', (e) => {
                 searchQuery = e.target.value;
                 renderGallery();
             });
-
-            // Form Submit (Bulk Adding)
-            document.getElementById('addContentForm').addEventListener('submit', (e) => {
-                e.preventDefault();
-
-                const rawInput = imgbbInput.value;
-                const baseTitle = document.getElementById('postTitle').value.trim();
-                const videoUrl = document.getElementById('videoLinkInput').value.trim();
-
-                const extractedUrls = parseImgBBInput(rawInput);
-
-                if (extractedUrls.length === 0) {
-                    showToast("කරුණාකර අවම වශයෙන් එක නිවැරදි ImgBB Link එකක් හෝ Embed Code එකක් දාන්න.", "error");
-                    return;
-                }
-
-                const timestamp = Date.now();
-
-                extractedUrls.forEach((url, index) => {
-                    let title = baseTitle;
-                    if (!title) {
-                        title = `Exclusive HD Media Collection #${mediaItems.length + index + 1}`;
-                    } else if (extractedUrls.length > 1) {
-                        title = `${baseTitle} #${index + 1}`;
-                    }
-
-                    const newItem = {
-                        id: 'item-' + (timestamp + index),
-                        title: title,
-                        imageUrl: url,
-                        videoUrl: videoUrl,
-                        type: videoUrl ? 'video' : 'photo',
-                        createdAt: timestamp + index
-                    };
-
-                    mediaItems.unshift(newItem);
-                });
-
-                saveItemsToStorage();
-                renderGallery();
-                showToast(`Image ${extractedUrls.length} ක් සාර්ථකව එකතු කළා!`);
-                closeModal();
-            });
         });
     </script>
-
-</body></html>
+</body>
+</html>
