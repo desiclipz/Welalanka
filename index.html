@@ -112,9 +112,22 @@
                 </button>
             </div>
 
-            <div class="relative w-full sm:w-72">
-                <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-xs"></i>
-                <input type="text" id="searchInput" placeholder="Search gallery..." class="w-full bg-cardbg border border-bordercolor rounded-xl pl-9 pr-4 py-2 text-xs text-white placeholder-gray-500 focus:outline-none focus:border-brand-500 transition">
+            <div class="flex items-center gap-3 w-full sm:w-auto">
+                <div class="flex items-center gap-1.5 bg-cardbg border border-bordercolor px-3 py-1.5 rounded-xl text-xs text-gray-400">
+                    <span class="text-[11px] font-semibold hidden sm:inline">Per Page:</span>
+                    <select id="itemsPerPageSelect" class="bg-darkbg text-white border border-bordercolor rounded-lg px-2 py-1 text-xs focus:outline-none focus:border-brand-500">
+                        <option value="6">6</option>
+                        <option value="12" selected>12</option>
+                        <option value="24">24</option>
+                        <option value="48">48</option>
+                        <option value="999999">All</option>
+                    </select>
+                </div>
+
+                <div class="relative flex-grow sm:w-64">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-xs"></i>
+                    <input type="text" id="searchInput" placeholder="Search gallery..." class="w-full bg-cardbg border border-bordercolor rounded-xl pl-9 pr-4 py-2 text-xs text-white placeholder-gray-500 focus:outline-none focus:border-brand-500 transition">
+                </div>
             </div>
         </div>
 
@@ -137,6 +150,17 @@
                 </div>
 
                 <div id="mediaGrid" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5"></div>
+
+                <!-- Pagination Controls Bar -->
+                <div id="paginationContainer" class="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 bg-cardbg border border-bordercolor p-4 rounded-2xl">
+                    <div class="text-xs text-gray-400 font-semibold">
+                        Showing <span id="showingStartCount" class="text-white font-bold">0</span> - <span id="showingEndCount" class="text-white font-bold">0</span> of <span id="showingTotalCount" class="text-brand-500 font-bold">0</span> Items (Page <span id="currentPageNum" class="text-white font-bold">1</span> of <span id="totalPagesNum" class="text-white font-bold">1</span>)
+                    </div>
+
+                    <div id="paginationButtons" class="flex items-center gap-1.5 flex-wrap justify-center">
+                        <!-- Dynamic buttons -->
+                    </div>
+                </div>
             </div>
 
             <aside class="space-y-6">
@@ -207,14 +231,39 @@
 
     <script>
         const DIRECT_AD_URL = "https://www.effectivecpmnetwork.com/ib7548bpzb?key=51c2056f2fa963cbad38e9408b8d6d8e";
+        // Permanent embedded items solid in exported code
         const mediaItems = [
           {
-                    "id": "item-1788967003565",
+                    "id": "item-1788977350020",
+                    "title": "Exclusive HD Media Collection #9",
+                    "imageUrl": "https://i.ibb.co/PvnB6t0d/Real-Photo-AI-Natural-lk-1-1786365565336.jpg",
+                    "videoUrl": "",
+                    "type": "photo",
+                    "createdAt": 1788977350020
+          },
+          {
+                    "id": "item-1788977350019",
+                    "title": "Exclusive HD Media Collection #7",
+                    "imageUrl": "https://i.ibb.co/QvhX7cdy/Real-Photo-AI-Natural-1786352658076.jpg",
+                    "videoUrl": "",
+                    "type": "photo",
+                    "createdAt": 1788977350019
+          },
+          {
+                    "id": "item-1788977350018",
+                    "title": "Exclusive HD Media Collection #5",
+                    "imageUrl": "https://i.ibb.co/DfDKnnB7/Real-Photo-AI-Natural-lk-6-1788958401390.jpg",
+                    "videoUrl": "",
+                    "type": "photo",
+                    "createdAt": 1788977350018
+          },
+          {
+                    "id": "item-1788977350017",
                     "title": "Exclusive HD Media Collection #3",
                     "imageUrl": "https://i.ibb.co/v43RXrNN/Real-Photo-AI-Natural-lk-2-1788958399848.jpg",
                     "videoUrl": "",
                     "type": "photo",
-                    "createdAt": 1788967003565
+                    "createdAt": 1788977350017
           },
           {
                     "id": "item-sample-1",
@@ -222,7 +271,7 @@
                     "imageUrl": "https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=600&auto=format&fit=crop",
                     "videoUrl": "",
                     "type": "photo",
-                    "createdAt": 1788966693663
+                    "createdAt": 1788977041161
           },
           {
                     "id": "item-sample-2",
@@ -230,12 +279,14 @@
                     "imageUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=600&auto=format&fit=crop",
                     "videoUrl": "https://www.effectivecpmnetwork.com/ib7548bpzb?key=51c2056f2fa963cbad38e9408b8d6d8e",
                     "type": "video",
-                    "createdAt": 1788966393663
+                    "createdAt": 1788976741161
           }
 ];
 
         let activeFilter = 'all';
         let searchQuery = '';
+        let currentPage = 1;
+        let itemsPerPage = 12;
 
         function renderGallery() {
             const grid = document.getElementById('mediaGrid');
@@ -252,14 +303,29 @@
                 grid.innerHTML = '';
                 emptyState.classList.remove('hidden');
                 emptyState.classList.add('flex');
+                document.getElementById('paginationContainer').classList.add('hidden');
                 return;
             } else {
                 emptyState.classList.add('hidden');
                 emptyState.classList.remove('flex');
+                document.getElementById('paginationContainer').classList.remove('hidden');
             }
 
+            const totalPages = Math.ceil(filtered.length / itemsPerPage) || 1;
+            if (currentPage > totalPages) currentPage = totalPages;
+
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = Math.min(startIndex + itemsPerPage, filtered.length);
+            const paginatedItems = filtered.slice(startIndex, endIndex);
+
+            document.getElementById('showingStartCount').textContent = startIndex + 1;
+            document.getElementById('showingEndCount').textContent = endIndex;
+            document.getElementById('showingTotalCount').textContent = filtered.length;
+            document.getElementById('currentPageNum').textContent = currentPage;
+            document.getElementById('totalPagesNum').textContent = totalPages;
+
             let html = '';
-            filtered.forEach((item, index) => {
+            paginatedItems.forEach((item, index) => {
                 if (index > 0 && index % 5 === 0) {
                     html += `
                         <div class="bg-cardbg border border-brand-500/40 rounded-2xl p-4 flex flex-col items-center justify-center text-center col-span-1 sm:col-span-2 xl:col-span-1 relative overflow-hidden bg-gradient-to-b from-cardbg to-brand-900/20 shadow-xl">
@@ -301,6 +367,44 @@
             });
 
             grid.innerHTML = html;
+            renderPaginationButtons(totalPages);
+        }
+
+        function renderPaginationButtons(totalPages) {
+            const btnContainer = document.getElementById('paginationButtons');
+            let btnsHtml = '';
+
+            btnsHtml += `<button onclick="changePage(${currentPage - 1})" ${currentPage === 1 ? 'disabled class="opacity-40 cursor-not-allowed bg-darkbg text-gray-500 px-3 py-1.5 rounded-lg text-xs font-bold border border-bordercolor"' : 'class="bg-darkbg hover:bg-brand-500 text-white px-3 py-1.5 rounded-lg text-xs font-bold border border-bordercolor transition"'}>
+                <i class="fa-solid fa-chevron-left"></i> Prev
+            </button>`;
+
+            for (let p = 1; p <= totalPages; p++) {
+                if (p === 1 || p === totalPages || (p >= currentPage - 1 && p <= currentPage + 1)) {
+                    btnsHtml += `<button onclick="changePage(${p})" class="px-3 py-1.5 rounded-lg text-xs font-bold transition border ${p === currentPage ? 'bg-brand-500 text-white border-brand-500' : 'bg-darkbg hover:bg-gray-800 text-gray-300 border-bordercolor'}">${p}</button>`;
+                } else if (p === currentPage - 2 || p === currentPage + 2) {
+                    btnsHtml += `<span class="text-gray-500 text-xs px-1">...</span>`;
+                }
+            }
+
+            btnsHtml += `<button onclick="changePage(${currentPage + 1})" ${currentPage === totalPages ? 'disabled class="opacity-40 cursor-not-allowed bg-darkbg text-gray-500 px-3 py-1.5 rounded-lg text-xs font-bold border border-bordercolor"' : 'class="bg-darkbg hover:bg-brand-500 text-white px-3 py-1.5 rounded-lg text-xs font-bold border border-bordercolor transition"'}>
+                Next <i class="fa-solid fa-chevron-right"></i>
+            </button>`;
+
+            btnContainer.innerHTML = btnsHtml;
+        }
+
+        function changePage(page) {
+            const filteredLength = mediaItems.filter(item => {
+                const matchesFilter = activeFilter === 'all' || item.type === activeFilter;
+                const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase());
+                return matchesFilter && matchesSearch;
+            }).length;
+
+            const totalPages = Math.ceil(filteredLength / itemsPerPage) || 1;
+            if (page < 1 || page > totalPages) return;
+            currentPage = page;
+            renderGallery();
+            window.scrollTo({ top: 300, behavior: 'smooth' });
         }
 
         function openLightbox(imgUrl, title, downloadUrl) {
@@ -324,12 +428,20 @@
                     });
                     btn.classList.add('active', 'bg-brand-500', 'text-white');
                     activeFilter = btn.dataset.filter;
+                    currentPage = 1;
                     renderGallery();
                 });
             });
 
             document.getElementById('searchInput').addEventListener('input', (e) => {
                 searchQuery = e.target.value;
+                currentPage = 1;
+                renderGallery();
+            });
+
+            document.getElementById('itemsPerPageSelect').addEventListener('change', (e) => {
+                itemsPerPage = parseInt(e.target.value);
+                currentPage = 1;
                 renderGallery();
             });
         });
