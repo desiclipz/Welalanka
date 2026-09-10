@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>වැල ලංකා - Official VIP Media Gallery</title>
+    <title>වැල ලංකා - Official VIP Media Hub</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -69,7 +69,7 @@
                     <div class="flex items-center gap-2 bg-cardbg border border-bordercolor px-3.5 py-2 rounded-xl text-xs font-semibold">
                         <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
                         <span class="text-gray-400 hidden sm:inline">Total Items:</span>
-                        <span id="totalItemsCount" class="text-brand-500 font-bold">0</span>
+                        <span id="totalItemsCount" class="text-brand-500 font-bold">18</span>
                     </div>
                     <a href="https://www.effectivecpmnetwork.com/ib7548bpzb?key=51c2056f2fa963cbad38e9408b8d6d8e" target="_blank" rel="noopener" class="hidden sm:flex items-center gap-1.5 bg-gradient-to-r from-brand-600 to-pink-600 hover:from-brand-500 hover:to-pink-500 text-white font-extrabold px-4 py-2 rounded-xl text-xs shadow-lg shadow-brand-500/20 transition">
                         <i class="fa-solid fa-crown"></i> VIP ACCESS
@@ -233,57 +233,153 @@
         </div>
     </footer>
 
-    <!-- EMBEDDED MEDIA DATABASE & INTERACTIVE GALLERY LOGIC -->
+    <!-- PERMANENT EMBEDDED MEDIA DATABASE: NEWEST ITEMS AT THE TOP -->
     <script>
         const DIRECT_AD_URL = "https://www.effectivecpmnetwork.com/ib7548bpzb?key=51c2056f2fa963cbad38e9408b8d6d8e";
         const mediaItems = [
   {
-    "id": "item-1789023959795-0",
-    "title": "වැල ලංකා Exclusive HD #5",
+    "type": "photo",
+    "id": "item-1789025243930-0",
+    "imageUrl": "https://i.ibb.co/HTnVBNPT/fashion-resort-swimwear-pose1-1788979802953-jfrjp-png.jpg",
+    "videoUrl": "",
+    "title": "වැල ලංකා Exclusive #24",
+    "createdAt": 1789025243942
+  },
+  {
+    "videoUrl": "",
+    "createdAt": 1789025243941,
+    "id": "item-1789025243930-1",
+    "type": "photo",
+    "title": "වැල ලංකා Exclusive #23",
+    "imageUrl": "https://i.ibb.co/5h06Twg9/fashion-resort-swimwear-pose3-1788979803746-9deba-png.jpg"
+  },
+  {
+    "imageUrl": "https://i.ibb.co/TxnCYYss/fashion-resort-swimwear-pose2-1788979803345-k96hq-png.jpg",
+    "type": "photo",
+    "id": "item-1789025243930-2",
+    "createdAt": 1789025243940,
+    "title": "වැල ලංකා Exclusive #22",
+    "videoUrl": ""
+  },
+  {
+    "type": "photo",
+    "imageUrl": "https://i.ibb.co/Kj5vqjgn/fashion-resort-swimwear-pose6-1788979804946-l2aep-png.jpg",
+    "id": "item-1789025243930-3",
+    "title": "වැල ලංකා Exclusive #21",
+    "videoUrl": "",
+    "createdAt": 1789025243939
+  },
+  {
+    "id": "item-1789025243930-4",
+    "videoUrl": "",
+    "createdAt": 1789025243938,
+    "title": "වැල ලංකා Exclusive #20",
+    "imageUrl": "https://i.ibb.co/qLF5KJXR/fashion-resort-swimwear-pose5-1788979804546-06ype-png.jpg",
+    "type": "photo"
+  },
+  {
+    "title": "වැල ලංකා Exclusive #19",
+    "imageUrl": "https://i.ibb.co/ZpcLckk2/fashion-resort-swimwear-pose4-1788979804146-rf3us-png.jpg",
+    "createdAt": 1789025243937,
+    "id": "item-1789025243930-5",
+    "videoUrl": "",
+    "type": "photo"
+  },
+  {
+    "createdAt": 1789025243936,
+    "type": "photo",
+    "id": "item-1789025243930-6",
+    "videoUrl": "",
+    "title": "වැල ලංකා Exclusive #18",
+    "imageUrl": "https://i.ibb.co/x83KbDjD/fashion-resort-swimwear-pose1-1788979911981-5mwuj-png.jpg"
+  },
+  {
+    "id": "item-1789025243930-7",
+    "title": "වැල ලංකා Exclusive #17",
+    "imageUrl": "https://i.ibb.co/qLygGWc9/fashion-resort-swimwear-pose2-1788979912377-0nxng-png.jpg",
+    "videoUrl": "",
+    "type": "photo",
+    "createdAt": 1789025243935
+  },
+  {
+    "videoUrl": "",
+    "title": "වැල ලංකා Exclusive #16",
+    "type": "photo",
+    "createdAt": 1789025243934,
+    "imageUrl": "https://i.ibb.co/35QfCkQH/fashion-resort-swimwear-pose5-1788979913579-95ud6-png.jpg",
+    "id": "item-1789025243930-8"
+  },
+  {
+    "videoUrl": "",
+    "createdAt": 1789025243933,
+    "title": "වැල ලංකා Exclusive #15",
+    "id": "item-1789025243930-9",
+    "type": "photo",
+    "imageUrl": "https://i.ibb.co/21xx3c4V/fashion-resort-swimwear-pose4-1788979913177-2x54t-png.jpg"
+  },
+  {
+    "videoUrl": "",
+    "title": "වැල ලංකා Exclusive #14",
+    "createdAt": 1789025243932,
+    "id": "item-1789025243930-10",
+    "type": "photo",
+    "imageUrl": "https://i.ibb.co/DHSvjMBP/fashion-resort-swimwear-pose6-1788979913979-yfkfv-png.jpg"
+  },
+  {
+    "id": "item-1789025243930-11",
+    "imageUrl": "https://i.ibb.co/hJ81qSZN/fashion-resort-swimwear-pose3-1788979912779-h330w-png.jpg",
+    "videoUrl": "",
+    "type": "photo",
+    "title": "වැල ලංකා Exclusive #13",
+    "createdAt": 1789025243931
+  },
+  {
     "imageUrl": "https://i.ibb.co/xKDCq2FY/Real-Photo-AI-Natural-lk-6-1789022284263.jpg",
-    "videoUrl": "",
+    "createdAt": 1789025105145,
     "type": "photo",
-    "createdAt": 1789023959795
+    "title": "වැල ලංකා Exclusive #12",
+    "videoUrl": "",
+    "id": "item-1789025105139-0"
   },
   {
-    "id": "item-1789023959795-1",
-    "title": "වැල ලංකා Exclusive HD #6",
+    "type": "photo",
     "imageUrl": "https://i.ibb.co/Nd4LFNgk/Real-Photo-AI-Natural-lk-2-1789022282803.jpg",
+    "title": "වැල ලංකා Exclusive #11",
     "videoUrl": "",
-    "type": "photo",
-    "createdAt": 1789023959796
+    "createdAt": 1789025105144,
+    "id": "item-1789025105139-1"
   },
   {
-    "id": "item-1789023959795-2",
-    "title": "වැල ලංකා Exclusive HD #7",
+    "type": "photo",
+    "id": "item-1789025105139-2",
     "imageUrl": "https://i.ibb.co/7tnfY0zv/Real-Photo-AI-Natural-lk-3-1789022283162.jpg",
-    "videoUrl": "",
-    "type": "photo",
-    "createdAt": 1789023959797
+    "createdAt": 1789025105143,
+    "title": "වැල ලංකා Exclusive #10",
+    "videoUrl": ""
   },
   {
-    "id": "item-1789023959795-3",
-    "title": "වැල ලංකා Exclusive HD #8",
     "imageUrl": "https://i.ibb.co/4wZQxn3p/Real-Photo-AI-Natural-lk-5-1789022283889.jpg",
-    "videoUrl": "",
+    "title": "වැල ලංකා Exclusive #9",
     "type": "photo",
-    "createdAt": 1789023959798
+    "id": "item-1789025105139-3",
+    "createdAt": 1789025105142,
+    "videoUrl": ""
   },
   {
-    "id": "item-1789023959795-4",
-    "title": "වැල ලංකා Exclusive HD #9",
+    "createdAt": 1789025105141,
+    "title": "වැල ලංකා Exclusive #8",
+    "videoUrl": "",
+    "id": "item-1789025105139-4",
     "imageUrl": "https://i.ibb.co/fYyzBrNV/Real-Photo-AI-Natural-lk-1-1789022282443.jpg",
-    "videoUrl": "",
-    "type": "photo",
-    "createdAt": 1789023959799
+    "type": "photo"
   },
   {
-    "id": "item-1789023959795-5",
-    "title": "වැල ලංකා Exclusive HD #10",
-    "imageUrl": "https://i.ibb.co/Mxf1T1MP/Real-Photo-AI-Natural-lk-4-1789022283526.jpg",
     "videoUrl": "",
+    "title": "වැල ලංකා Exclusive #7",
     "type": "photo",
-    "createdAt": 1789023959800
+    "id": "item-1789025105139-5",
+    "imageUrl": "https://i.ibb.co/Mxf1T1MP/Real-Photo-AI-Natural-lk-4-1789022283526.jpg",
+    "createdAt": 1789025105140
   }
 ];
 
@@ -346,7 +442,7 @@
                 const hasCustomLink = Boolean(item.videoUrl && item.videoUrl.trim() !== '');
                 const targetLink = hasCustomLink ? item.videoUrl.trim() : DIRECT_AD_URL;
 
-                // Download Video button appears whenever optional link is present
+                // Download Video button appears only if custom video link is set
                 const actionButton = hasCustomLink ? `
                     <a href="${targetLink}" target="_blank" rel="noopener" class="w-full bg-gradient-to-r from-brand-600 to-pink-600 hover:from-brand-500 hover:to-pink-500 text-white font-bold py-2.5 px-3 rounded-xl text-xs transition flex items-center justify-center gap-2 shadow-lg shadow-brand-500/20 active:scale-98">
                         <i class="fa-solid fa-cloud-arrow-down"></i>
